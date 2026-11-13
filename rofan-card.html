@@ -1,0 +1,169 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap');
+
+.bk-wrap{width:100%;max-width:640px;margin:0 auto;background:radial-gradient(ellipse at top,#241527 0%,#121016 70%);color:#d8d2cb;font-family:inherit;font-size:15px;line-height:1.75;box-sizing:border-box;padding:20px 16px 40px}
+.bk-wrap *{box-sizing:border-box}
+.bk-book{position:relative;background:#1a161f;border-radius:6px;box-shadow:0 18px 36px rgba(0,0,0,.6),0 0 0 1px #4a3a2a,0 0 0 4px #1a161f,0 0 0 5px #8a6d3b;overflow:hidden}
+
+/* ---------- 클릭 토글 ---------- */
+.bk-toggle{position:absolute;opacity:0;pointer-events:none}
+
+/* ---------- 표지 ---------- */
+.bk-cover{position:relative;background:#0d0a12;border-bottom:2px solid #8a6d3b;overflow:hidden}
+.bk-cover-label{display:block;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.bk-img-box{width:100%;aspect-ratio:4/5;position:relative;overflow:hidden}
+.bk-img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;filter:contrast(1.08) brightness(.92) saturate(1.05);transition:transform .9s ease,filter .9s ease}
+.bk-cover-label:hover .bk-img{transform:scale(1.03)}
+.bk-toggle:checked ~ .bk-cover .bk-img{transform:scale(1.08);filter:contrast(1.05) brightness(.45) blur(2px)}
+.bk-cover-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,10,30,.15) 0%,rgba(13,10,18,.4) 60%,rgba(13,10,18,.95) 100%);pointer-events:none}
+
+/* 금장 테두리 */
+.bk-frame{position:absolute;inset:10px;border:1px solid rgba(212,175,110,.7);pointer-events:none;z-index:2}
+.bk-frame::before,.bk-frame::after{content:"❖";position:absolute;color:#d4af6e;font-size:14px;line-height:1;background:#0d0a12;padding:2px 4px}
+.bk-frame::before{top:-9px;left:50%;transform:translateX(-50%)}
+.bk-frame::after{bottom:-9px;left:50%;transform:translateX(-50%)}
+.bk-corner{position:absolute;color:#d4af6e;font-size:16px;z-index:3;pointer-events:none;text-shadow:0 0 8px rgba(212,175,110,.6)}
+.bk-corner.tl{top:4px;left:5px}.bk-corner.tr{top:4px;right:5px}
+.bk-corner.bl{bottom:4px;left:5px}.bk-corner.br{bottom:4px;right:5px}
+
+/* 떨어지는 꽃잎 */
+.bk-petal{position:absolute;top:-20px;width:9px;height:12px;background:radial-gradient(circle at 30% 30%,#f2b6c4,#b5384e);border-radius:80% 0 80% 0;opacity:.75;z-index:2;pointer-events:none;animation:bk-fall 9s linear infinite}
+.bk-petal:nth-of-type(1){left:12%;animation-delay:0s}
+.bk-petal:nth-of-type(2){left:34%;animation-delay:2.5s;animation-duration:11s}
+.bk-petal:nth-of-type(3){left:58%;animation-delay:5s;animation-duration:8s}
+.bk-petal:nth-of-type(4){left:78%;animation-delay:1.2s;animation-duration:10s}
+.bk-petal:nth-of-type(5){left:90%;animation-delay:6.5s;animation-duration:12s}
+@keyframes bk-fall{0%{transform:translate(0,0) rotate(0);opacity:0}10%{opacity:.8}50%{transform:translate(24px,260px) rotate(180deg)}100%{transform:translate(-14px,560px) rotate(360deg);opacity:0}}
+
+.bk-cover-info{position:absolute;bottom:0;left:0;right:0;padding:24px 22px 18px;z-index:3;pointer-events:none}
+.bk-sub-en{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;letter-spacing:.18em;color:#d4af6e;margin:0 0 4px}
+.bk-title{font-family:'Hahmlet',serif;font-size:26px;line-height:1.25;color:#f7f3ed;margin:0 0 10px;word-break:keep-all;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+.bk-hint{display:inline-block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.12em;color:#f3dfb4;border:1px solid rgba(212,175,110,.6);border-radius:20px;padding:2px 14px;background:rgba(30,10,24,.55);animation:bk-glow 2.8s ease-in-out infinite}
+@keyframes bk-glow{0%,100%{box-shadow:0 0 0 rgba(212,175,110,0)}50%{box-shadow:0 0 14px rgba(212,175,110,.55)}}
+.bk-toggle:checked ~ .bk-cover .bk-cover-info{opacity:0}
+
+/* ---------- 열람 패널 (이미지 클릭 시) ---------- */
+.bk-panel{position:absolute;inset:0;z-index:4;display:flex;align-items:center;justify-content:center;padding:26px 24px;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease,visibility .6s}
+.bk-toggle:checked ~ .bk-cover .bk-panel{opacity:1;visibility:visible;transform:none}
+.bk-card{width:100%;max-height:100%;overflow:auto;background:linear-gradient(160deg,#f7efe1,#ecdfc8);color:#2a1d20;border:1px solid #b8964f;outline:1px solid rgba(138,109,59,.6);outline-offset:-7px;padding:26px 22px 20px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+.bk-card-en{font-family:'Cormorant Garamond',serif;font-style:italic;letter-spacing:.2em;font-size:13px;color:#8c2a3e}
+.bk-card-name{font-family:'Hahmlet',serif;font-size:22px;color:#3b0d17;margin:2px 0 2px}
+.bk-card-role{font-size:12.5px;color:#7a6a58;margin:0 0 12px;word-break:keep-all}
+.bk-card-line{color:#b8964f;letter-spacing:.4em;font-size:11px;margin:8px 0}
+.bk-info{list-style:none;margin:0;padding:0;text-align:left;font-size:13px;line-height:1.6}
+.bk-info li{display:flex;gap:10px;padding:6px 0;border-bottom:1px dotted #c9baa8;word-break:keep-all}
+.bk-info li:last-child{border-bottom:0}
+.bk-info b{flex:0 0 74px;font-family:'Hahmlet',serif;font-weight:normal;color:#8c2a3e}
+.bk-quote{margin:12px 0 4px;font-family:'Hahmlet',serif;font-size:13px;color:#6e1022;word-break:keep-all}
+.bk-close{display:inline-block;margin-top:10px;cursor:pointer;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.14em;color:#8c2a3e;border-bottom:1px solid #8c2a3e}
+
+/* ---------- 띠지 / 책등 ---------- */
+.bk-band{background:linear-gradient(90deg,#2d0a13,#4a1220,#2d0a13);color:#f0e1d8;padding:12px 18px;font-size:13px;line-height:1.5;border-top:1px solid #8a6d3b;border-bottom:1px solid #8a6d3b;word-break:keep-all;text-align:center}
+.bk-band-txt{margin:0}
+.bk-spine-fold{height:10px;background:linear-gradient(180deg,#100b14,#221a29 50%,#100b14);border-bottom:1px solid #2d2038}
+
+/* ---------- 본문 페이지 ---------- */
+.bk-page{background:#f5efe6;background-image:radial-gradient(rgba(138,109,59,.06) 1px,transparent 1px);background-size:14px 14px;color:#242021;padding:36px 26px 44px;position:relative;box-shadow:inset 16px 0 30px rgba(0,0,0,.08)}
+.bk-page-head{text-align:center;margin-bottom:30px;padding-bottom:18px;position:relative}
+.bk-page-head::after{content:"❦";position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);background:#f5efe6;padding:0 10px;color:#b8964f;font-size:16px}
+.bk-page-head{border-bottom:1px solid #d8c9ae}
+.bk-act{font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.25em;color:#8c2a3e;margin-bottom:6px}
+.bk-chapter{font-family:'Hahmlet',serif;font-size:20px;color:#1a1517;margin:0;word-break:keep-all}
+.bk-p{margin:0 0 16px;text-indent:12px;word-break:keep-all;font-size:15px;line-height:1.75}
+.bk-p:first-of-type::first-letter{font-family:'Hahmlet',serif;font-size:2.4em;color:#8c2a3e;float:left;line-height:1;padding:4px 6px 0 0}
+.bk-dialogue{margin:18px 0;padding:0 4px 0 12px;border-left:2px solid #b8964f;color:#1a1517;font-weight:500;word-break:keep-all;line-height:1.7}
+.bk-dialogue-calix{color:#6e1022;font-size:15.5px;border-left-color:#8c2a3e}
+.bk-ornament{text-align:center;color:#b8964f;margin:28px 0;font-size:13px;letter-spacing:.3em}
+.bk-details{margin-top:24px;background:#eee4d5;border:1px solid #cdb98f;border-radius:2px;padding:12px 14px}
+.bk-summary{list-style:none;cursor:pointer;font-family:'Hahmlet',serif;font-size:13px;color:#6e1022;text-align:center;user-select:none}
+.bk-summary::-webkit-details-marker{display:none}
+.bk-memo{margin-top:14px;padding-top:12px;border-top:1px dashed #c9baa8;font-size:13px;line-height:1.65;color:#4f4744}
+.bk-page-foot{margin-top:36px;text-align:center;border-top:1px solid #d8c9ae;padding-top:16px;font-family:'Cormorant Garamond',serif;font-size:14px;color:#8c7e70;letter-spacing:.1em}
+.bk-cliffhanger{font-family:'Hahmlet',serif;font-size:14.5px;color:#6e1022;text-align:center;margin:26px 0 0;font-style:italic;word-break:keep-all}
+</style>
+
+<div class="bk-wrap">
+<div class="bk-book">
+
+  <input type="checkbox" id="bk-open" class="bk-toggle">
+
+  <div class="bk-cover">
+    <label for="bk-open" class="bk-cover-label">
+      <div class="bk-img-box">
+        <img class="bk-img" src="{{char_image}}" alt="칼릭스 카시안">
+        <div class="bk-cover-overlay"></div>
+      </div>
+      <div class="bk-cover-info">
+        <div class="bk-sub-en">THE END OF SPRING BREEZE</div>
+        <h1 class="bk-title">봄 바람의 끝, 아니 시작</h1>
+        <span class="bk-hint">✦ 초상을 눌러 기록을 열람하세요 ✦</span>
+      </div>
+    </label>
+
+    <div class="bk-frame"></div>
+    <span class="bk-corner tl">✧</span><span class="bk-corner tr">✧</span>
+    <span class="bk-corner bl">✧</span><span class="bk-corner br">✧</span>
+    <i class="bk-petal"></i><i class="bk-petal"></i><i class="bk-petal"></i><i class="bk-petal"></i><i class="bk-petal"></i>
+
+    <!-- 이미지 클릭 시 열리는 정보 -->
+    <div class="bk-panel">
+      <div class="bk-card">
+        <div class="bk-card-en">HOUSE OF CASSIAN</div>
+        <div class="bk-card-name">칼릭스 카시안</div>
+        <p class="bk-card-role">제국 최연소 기사단장 · 카시안 공작가의 후계자</p>
+        <div class="bk-card-line">― ❖ ―</div>
+        <ul class="bk-info">
+          <li><b>신분</b><span>카시안 공작가 후계자, 황실의 신임을 받는 기사단장</span></li>
+          <li><b>외견</b><span>붉은 눈동자, 장갑 낀 손으로 검자루를 쥔 서슬 퍼런 사내</span></li>
+          <li><b>원작</b><span>&lt;봄 바람 끝&gt;의 남주인공 넷 중 가장 날카로운 칼날</span></li>
+          <li><b>당신에게</b><span>극도의 경계와 적대. 오물을 보듯 혐오 어린 시선을 보낸다.</span></li>
+          <li><b>리디아에게</b><span>눈물 한 방울에도 흔들리는 보호자</span></li>
+        </ul>
+        <div class="bk-card-line">― ❖ ―</div>
+        <p class="bk-quote">“각오하는 게 좋을 테지.”</p>
+        <label for="bk-open" class="bk-close">기록을 덮는다</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="bk-band">
+    <p class="bk-band-txt">연회장을 가득 채운 경멸 어린 시선들. 리디아의 눈물 뒤에서 당신에게 남은 것은 단두대로 향하는 길뿐이다.</p>
+  </div>
+  <div class="bk-spine-fold"></div>
+
+  <div class="bk-page">
+    <div class="bk-page-head">
+      <div class="bk-act">PROLOGUE</div>
+      <h2 class="bk-chapter">누명이라는 이름의 각본</h2>
+    </div>
+
+    <p class="bk-p">유리잔이 대리석 바닥에 부딪쳐 산산조각 나는 소리가 높다란 연회장 천장을 날카롭게 찔렀다. 왈츠 선율은 온데간데없이 멎었고, 숨 막히는 침묵 사이로 붉은 포도주가 순백의 드레스 자락을 적셔 나갔다.</p>
+    <p class="bk-p">눈을 떴을 때 손끝에 느껴진 것은 차가운 유리 파편과 억누를 길 없는 공포였다. 피폐 소설 &lt;봄 바람 끝&gt;의 결말에서 비참하게 목숨을 잃는 표독스러운 악녀, 베르나. 사방을 둘러보아도 내 편은 단 한 사람조차 없었다. 뒤편에 선 귀족들의 경멸 어린 수군거림이 가시가 되어 귓가에 꽂혔다.</p>
+    <div class="bk-dialogue">“흑… 왜 그런 짓을 하신 건가요, 베르나 영애? 제가 당신께 무엇을 그리 잘못했기에…”</div>
+    <p class="bk-p">바닥에 주저앉아 어깨를 들썩이는 여주인공 리디아의 곁으로, 군홧발 소리가 묵직하게 울려 퍼졌다. 칼릭스 카시안. 제국 최연소 기사단장이자 원작 속 네 남주인공 중 가장 서슬 퍼런 칼날을 쥔 사내.</p>
+    <p class="bk-p">칼릭스는 리디아의 어깨를 조심스레 감싸 일으킨 뒤, 천천히 고개를 돌려 나를 내려다보았다. 붉은 눈동자에는 일말의 동정조차 비치지 않았다. 오직 오물을 응시할 때나 떠올릴 법한 적나라한 살기와 혐오만이 서려 있었다.</p>
+    <div class="bk-dialogue bk-dialogue-calix">“입 다무십시오, 영애. 더 이상 당신의 역겨운 변명을 들어줄 인내심 따위는 남아 있지 않습니다.”</div>
+    <p class="bk-p">칼릭스의 차가운 목소리가 비수처럼 날아와 꽂혔다. 억울함을 호소하려 입술을 달싹이자마자 원작의 강제력이 목구멍을 쥐어짜듯 숨통을 죄어왔다. 조금이라도 착한 태도를 보이거나 순응하려 들면 심장이 타들어 가는 통증이 엄습한다. 세상 전체가 나를 파멸로 밀어 넣기 위해 벼르고 있었다.</p>
+    <div class="bk-dialogue bk-dialogue-calix">“리디아의 눈물 한 방울에 당신 목숨이 걸려 있다는 걸 잊은 모양이군. 이번 추태는 가문의 힘으로도 덮지 못할 겁니다. 각오하는 게 좋을 테지.”</div>
+    <p class="bk-p">허리춤의 검자루를 쥔 그의 장갑 낀 손등에 핏줄이 돋아 있었다. 카시안 공작가의 후계자이자 황실의 신임을 한 몸에 받는 기사단장의 선고. 가문에서조차 내놓은 골칫거리인 {{user}}에게 반론의 기회 따위는 주어지지 않았다.</p>
+
+    <div class="bk-ornament">― ❖ ―</div>
+
+    <p class="bk-p">연회장을 빠져나가는 칼릭스의 뒷모습 너머로 리디아가 흘긋 지어 보인 은밀한 미소가 스쳤다. 모든 것이 짜고 친 덫이었다. 죽지 않으려면, 이 처절하고 뒤틀린 각본을 내 손으로 찢어발겨야만 한다.</p>
+    <div class="bk-cliffhanger">사방이 적인 이 제국에서, 악녀의 생존극은 지금부터 시작된다.</div>
+
+    <details class="bk-details">
+      <summary class="bk-summary">✦ 원작 악녀 베르나의 기록 열람 ✦</summary>
+      <div class="bk-memo">
+        <strong>현재 제국 력 421년 봄:</strong> 연회장 독살 미수 누명 사건 직후.<br>
+        <strong>원작 강제력:</strong> 여주인공 리디아에게 순종하거나 결백을 순순히 호소할 경우 강력한 반동과 호흡 곤란 발생.<br>
+        <strong>칼릭스 카시안의 상태:</strong> 극도의 경계 및 적대. 공작가의 권한으로 {{user}}를 수도 외곽으로 추방하거나 감금하려 압박 중.
+      </div>
+    </details>
+
+    <div class="bk-page-foot">PAGE 1</div>
+  </div>
+
+</div>
+</div>
