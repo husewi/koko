@@ -1,193 +1,127 @@
 <style>
-.hz-paper{background-color:#f1ece0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42  0 0 0 0 .37  0 0 0 0 .28  0 0 0 .13 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"),radial-gradient(ellipse at 50% 0%,#fbf8f0 0%,#f1ece0 55%,#e4dccb 100%);}
-.hz-news{background-color:#e9e3d1;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .26  0 0 0 0 .18  0 0 0 .2 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");}
-details>summary{list-style:none;}
-details>summary::-webkit-details-marker{display:none;}
-details[open]>div{animation:hzFade .7s ease both;}
-.hz-sum{transition:filter .3s,transform .3s;}
-.hz-sum:hover{filter:brightness(1.05);}
+.hz{max-width:420px;margin:0 auto;position:relative;overflow:hidden;padding:18px 7px 72px;font-family:'Nanum Myeongjo',serif;color:#3a342b;border-radius:10px;box-shadow:0 0 0 1px #d6ccb4,0 0 0 6px #f7f3e9,0 0 0 7px #d6ccb4,0 24px 50px rgba(80,66,40,.3);background-color:#f1ece0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42 0 0 0 0 .37 0 0 0 0 .28 0 0 0 .13 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"),radial-gradient(ellipse at 50% 0%,#fbf8f0,#f1ece0 55%,#e4dccb);}
+.hz summary{list-style:none;cursor:pointer}
+.hz summary::-webkit-details-marker{display:none}
+.hz details[open]>div{animation:hzFade .7s ease both}
+.hz p{margin:0}
+.hzf{position:relative;z-index:2;border:1.5px solid #c9bb9d;border-radius:200px 200px 0 0/120px 120px 0 0;padding:58px 13px 18px;background:linear-gradient(180deg,rgba(255,253,246,.55),rgba(255,253,246,.1));box-shadow:inset 0 0 0 4px #f4efe3,inset 0 0 0 5.5px #c9bb9d,1px 1px 0 #fffdf7,0 0 30px rgba(255,255,255,.4)}
+.hzs{text-align:center;padding:12px 8px;background:linear-gradient(180deg,#f8f5ec,#ece5d4);border:1px solid #d3c7ad;box-shadow:inset 1px 1px 0 #fff,inset -1px -1px 3px rgba(120,100,60,.22),0 3px 8px rgba(100,85,55,.18);font-size:13px;letter-spacing:3px;text-shadow:1px 1px 0 #fff}
+.hzb{margin-top:8px;padding:15px;background:rgba(255,253,246,.72);border:1px solid #e0d6c0;box-shadow:inset 0 0 18px rgba(160,140,95,.14);font-size:13.5px;line-height:2}
+.hzb p{margin:0 0 10px}
+.hzq{margin:0;padding:8px 12px;border-left:2px solid #b8975a;background:linear-gradient(90deg,rgba(184,151,90,.14),transparent);color:#6d6250;font-size:12.5px;line-height:1.9;font-style:italic}
+.hzls{padding:12px 15px;border:1px solid #c2ae80;font-size:13px;background:linear-gradient(115deg,#f3ead2,#fffaea 34%,#e9d8ad 66%,#f8f0da);box-shadow:0 8px 16px rgba(80,66,35,.28),inset 0 0 0 4px rgba(255,255,255,.45)}
+.hzlc{margin-top:8px;padding:16px;border:1px solid #d3c29a;background:linear-gradient(115deg,#fbf5e4,#fffdf5 40%,#f1e6c8);box-shadow:0 8px 18px rgba(80,66,35,.22),inset 0 0 24px rgba(180,150,80,.18);font-size:13.5px;line-height:2}
+.hzlc p{margin:0 0 8px}
+.hzsig{text-align:right;color:#8b7747;font-style:italic}
+.hzh{text-align:center;color:#a08f6d;text-shadow:1px 1px 0 #fff}
+.lf{position:absolute;z-index:1;pointer-events:none;width:66px;height:30px;border-radius:100% 0;background:repeating-linear-gradient(60deg,transparent 0 5px,rgba(130,110,70,.16) 5px 6px),linear-gradient(transparent calc(50% - .5px),rgba(130,110,70,.4) 0 calc(50% + .5px),transparent 0),#f4efe3;border:1.5px solid #fffdf7;box-shadow:1.5px 2px 3px rgba(120,100,65,.42),-1px -1px 0 #fff}
+.fl{position:absolute;z-index:1;pointer-events:none;color:#f6f1e5;text-shadow:1px 2px 3px rgba(120,100,65,.55),-1px -1px 0 #fff;line-height:1}
+.st{position:absolute;z-index:5;pointer-events:none;color:#ecc86c;text-shadow:0 0 8px #f6dd91,0 0 2px #fff;animation:hzTw 3.4s ease-in-out infinite;line-height:1}
+.pt{position:absolute;z-index:5;pointer-events:none;top:-4%;width:7px;height:11px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#fffdf6,#e3d5b6);box-shadow:1px 1px 2px rgba(110,90,55,.35);animation:hzFall linear infinite}
+.sw{position:absolute;left:0;top:0;right:0;bottom:0;z-index:4;pointer-events:none;opacity:.5;background:linear-gradient(105deg,transparent 40%,rgba(255,251,236,.85) 50%,transparent 60%);background-size:300% 100%;animation:hzSweep 8s linear infinite}
+.foil{background:linear-gradient(100deg,#7d5f27 20%,#e9cf86 38%,#fff7d6 50%,#d3ac55 62%,#7d5f27 80%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:hzFoil 5s linear infinite}
+.seal{display:inline-block;width:19px;height:19px;line-height:19px;text-align:center;border-radius:50%;background:radial-gradient(circle at 35% 30%,#4c4a52,#0f0f12);color:#ecd9a0;font-size:10px;vertical-align:middle;animation:hzPulse 2.6s ease-in-out infinite}
+.news{position:relative;padding:10px 11px 11px;border:1px solid #cfc6ad;transform:rotate(-.8deg);color:#26221b;box-shadow:0 8px 18px rgba(70,58,35,.34),inset 0 0 22px rgba(150,125,70,.25);background-color:#e9e3d1;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3 0 0 0 0 .26 0 0 0 0 .18 0 0 0 .2 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+.news p{margin:0}
+.nl{font-size:12px;line-height:1.7;padding:4px 0;border-bottom:1px dotted #8a8269}
+.nl b{display:inline-block;width:46px}
 @keyframes hzFade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 @keyframes hzTw{0%,100%{opacity:.1;transform:scale(.4) rotate(0deg)}50%{opacity:1;transform:scale(1.15) rotate(45deg)}}
 @keyframes hzSweep{0%{background-position:170% 0}100%{background-position:-70% 0}}
 @keyframes hzFoil{from{background-position:0 0}to{background-position:-250% 0}}
 @keyframes hzFall{0%{top:-4%;opacity:0;transform:translateX(0) rotate(0deg)}10%{opacity:.95}50%{transform:translateX(22px) rotate(170deg)}100%{top:102%;opacity:0;transform:translateX(-12px) rotate(350deg)}}
-@keyframes hzPulse{0%,100%{box-shadow:0 0 0 1px #a68f58,0 0 4px rgba(214,178,90,.35),0 2px 4px rgba(0,0,0,.4)}50%{box-shadow:0 0 0 1px #e3c068,0 0 16px rgba(240,203,112,.95),0 2px 4px rgba(0,0,0,.4)}}
-@keyframes hzSway{from{transform:rotate(-1.4deg)}to{transform:rotate(1.4deg)}}
-@keyframes hzGlint{0%,70%,100%{opacity:0;transform:translateX(-30px)}85%{opacity:.8;transform:translateX(30px)}}
-.hz-tw{animation:hzTw 3.4s ease-in-out infinite;}
-.hz-sweep{background:linear-gradient(105deg,transparent 40%,rgba(255,251,236,.8) 50%,transparent 60%);background-size:300% 100%;animation:hzSweep 8s linear infinite;}
-.hz-foil{background:linear-gradient(100deg,#7d5f27 20%,#e9cf86 38%,#fff7d6 50%,#d3ac55 62%,#7d5f27 80%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:hzFoil 5s linear infinite;}
-.hz-fall{animation:hzFall linear infinite;}
-.hz-pulse{animation:hzPulse 2.6s ease-in-out infinite;}
-.hz-sway{transform-origin:0 0;animation:hzSway 7s ease-in-out infinite alternate;}
-.hz-glint{animation:hzGlint 6s ease-in-out infinite;}
-@media (prefers-reduced-motion:reduce){.hz-tw,.hz-sweep,.hz-foil,.hz-fall,.hz-pulse,.hz-sway,.hz-glint,details[open]>div{animation:none}}
+@keyframes hzPulse{0%,100%{box-shadow:0 0 0 1px #a68f58,0 0 4px rgba(214,178,90,.35)}50%{box-shadow:0 0 0 1px #e3c068,0 0 16px rgba(240,203,112,.95)}}
+@keyframes hzGlint{0%,70%,100%{opacity:0}85%{opacity:.8}}
+@media (prefers-reduced-motion:reduce){.st,.sw,.foil,.pt,.seal,.hz details[open]>div{animation:none}}
 </style>
 
-<!-- 잎사귀 정의 -->
-<svg width="0" height="0" style="position:absolute;"><defs>
-<g id="hzLf">
-<path d="M0,0 C12,-16 38,-20 60,0 C38,20 12,16 0,0Z" fill="#f4efe3" stroke="#fffdf7" stroke-width="1.5"/>
-<g transform="translate(.8 .9)" stroke="rgba(130,110,70,.38)" stroke-width=".6" fill="none"><path d="M2,0 L58,0 M12,0 L28,-9 M12,0 L28,9 M26,0 L42,-9 M26,0 L42,9 M40,0 L52,-5 M40,0 L52,5"/></g>
-<g stroke="#fffdf7" stroke-width=".8" fill="none"><path d="M2,0 L58,0 M12,0 L28,-9 M12,0 L28,9 M26,0 L42,-9 M26,0 L42,9 M40,0 L52,-5 M40,0 L52,5"/></g>
-</g>
-<path id="hzSt" d="M0,0 L-5,0 L0,-6 L5,0 L0,5 L0,0Z"/>
-</defs></svg>
+<div class="hz">
 
-<div class="hz-paper" style="max-width:420px;margin:0 auto;position:relative;overflow:hidden;padding:20px 12px 76px;font-family:'Nanum Myeongjo',serif;color:#3a342b;border-radius:10px;box-shadow:0 0 0 1px #d6ccb4,0 0 0 6px #f7f3e9,0 0 0 7px #d6ccb4,0 24px 50px rgba(80,66,40,.3);">
+<!-- 양각 장식 (CSS) -->
+<i class="lf" style="left:-18px;top:6px;transform:rotate(35deg)"></i><i class="lf" style="left:8px;top:34px;transform:rotate(-15deg)"></i><i class="lf" style="left:-14px;top:70px;transform:rotate(60deg)"></i><i class="lf" style="left:14px;top:104px;transform:rotate(-30deg)"></i>
+<i class="lf" style="right:-20px;top:30px;transform:rotate(145deg)"></i><i class="lf" style="right:6px;top:62px;transform:rotate(200deg)"></i><i class="lf" style="right:-16px;top:98px;transform:rotate(130deg)"></i>
+<i class="lf" style="left:-12px;bottom:128px;transform:rotate(-60deg)"></i><i class="lf" style="left:16px;bottom:96px;transform:rotate(20deg)"></i><i class="lf" style="left:70px;bottom:20px;transform:rotate(-12deg)"></i>
+<i class="fl" style="left:-6px;bottom:-4px;font-size:92px">❀</i>
+<i class="fl" style="right:8px;bottom:6px;font-size:40px">❁</i>
 
-<!-- 양각 장식 : 좌상 -->
-<svg class="hz-sway" width="150" height="250" viewBox="0 0 150 250" style="position:absolute;left:-14px;top:-8px;z-index:0;pointer-events:none;filter:drop-shadow(1.4px 1.8px 1px rgba(120,100,65,.42)) drop-shadow(-1px -1px 0 rgba(255,255,255,.95));">
-<path d="M0,18 C34,44 56,100 74,196" fill="none" stroke="#fffdf7" stroke-width="2.2"/>
-<use href="#hzLf" transform="translate(8,22) rotate(28) scale(1.15)"/><use href="#hzLf" transform="translate(24,44) rotate(-20) scale(.95)"/>
-<use href="#hzLf" transform="translate(40,76) rotate(62) scale(1.1)"/><use href="#hzLf" transform="translate(44,104) rotate(-28) scale(1)"/>
-<use href="#hzLf" transform="translate(58,138) rotate(52) scale(.9)"/><use href="#hzLf" transform="translate(64,166) rotate(-40) scale(.8)"/>
-</svg>
-<!-- 양각 장식 : 우상 -->
-<svg class="hz-sway" width="120" height="230" viewBox="0 0 120 230" style="position:absolute;right:-10px;top:84px;z-index:0;pointer-events:none;filter:drop-shadow(1.4px 1.8px 1px rgba(120,100,65,.42)) drop-shadow(-1px -1px 0 rgba(255,255,255,.95));">
-<path d="M120,10 C96,40 78,90 70,170" fill="none" stroke="#fffdf7" stroke-width="2.2"/>
-<use href="#hzLf" transform="translate(112,18) rotate(150) scale(1.05)"/><use href="#hzLf" transform="translate(96,52) rotate(200) scale(1)"/>
-<use href="#hzLf" transform="translate(86,88) rotate(140) scale(.95)"/><use href="#hzLf" transform="translate(78,126) rotate(205) scale(.85)"/>
-</svg>
-<!-- 양각 장식 : 좌하 꽃 -->
-<svg class="hz-sway" width="200" height="300" viewBox="0 0 200 300" style="position:absolute;left:-12px;bottom:-6px;z-index:0;pointer-events:none;filter:drop-shadow(1.4px 1.8px 1px rgba(120,100,65,.42)) drop-shadow(-1px -1px 0 rgba(255,255,255,.95));">
-<path d="M18,0 C22,90 40,170 70,250" fill="none" stroke="#fffdf7" stroke-width="2.2"/>
-<use href="#hzLf" transform="translate(20,40) rotate(-35) scale(.9)"/><use href="#hzLf" transform="translate(24,80) rotate(40) scale(.95)"/>
-<use href="#hzLf" transform="translate(30,120) rotate(-30) scale(1)"/><use href="#hzLf" transform="translate(40,160) rotate(45) scale(1)"/>
-<use href="#hzLf" transform="translate(110,228) rotate(-20) scale(1.1)"/><use href="#hzLf" transform="translate(120,262) rotate(25) scale(1)"/>
-<g transform="translate(74,252)">
-<g fill="#f6f1e5" stroke="#fffdf7" stroke-width="1.4">
-<ellipse cx="0" cy="-22" rx="13" ry="24"/><ellipse cx="0" cy="-22" rx="13" ry="24" transform="rotate(45)"/><ellipse cx="0" cy="-22" rx="13" ry="24" transform="rotate(90)"/><ellipse cx="0" cy="-22" rx="13" ry="24" transform="rotate(135)"/>
-<ellipse cx="0" cy="-22" rx="13" ry="24" transform="rotate(180)"/><ellipse cx="0" cy="-22" rx="13" ry="24" transform="rotate(225)"/><ellipse cx="0" cy="-22" rx="13" ry="24" transform="rotate(270)"/><ellipse cx="0" cy="-22" rx="13" ry="24" transform="rotate(315)"/></g>
-<g stroke="rgba(130,110,70,.35)" stroke-width=".6" fill="none"><path d="M0,-8 L0,-40 M0,-8 L-6,-38 M0,-8 L6,-38"/><path d="M0,-8 L0,-40 M0,-8 L-6,-38 M0,-8 L6,-38" transform="rotate(90)"/><path d="M0,-8 L0,-40 M0,-8 L-6,-38 M0,-8 L6,-38" transform="rotate(180)"/><path d="M0,-8 L0,-40 M0,-8 L-6,-38 M0,-8 L6,-38" transform="rotate(270)"/></g>
-<circle r="9" fill="#efe6cf" stroke="#fffdf7" stroke-width="1.2"/><g fill="#fffdf7"><circle cx="0" cy="-3" r="1.4"/><circle cx="3" cy="1" r="1.4"/><circle cx="-3" cy="1" r="1.4"/><circle cx="0" cy="3.4" r="1.2"/><circle cx="0" cy="0" r="1.2"/></g>
-</g></svg>
+<div class="sw"></div>
+<i class="st" style="left:8%;top:9%;font-size:18px">✦</i><i class="st" style="right:9%;top:5%;font-size:12px;animation-delay:-1.2s">✦</i><i class="st" style="right:4%;top:36%;font-size:22px;animation-delay:-2.1s">✦</i><i class="st" style="left:3%;top:52%;font-size:14px;animation-delay:-.6s">✦</i><i class="st" style="left:48%;top:78%;font-size:16px;animation-delay:-2.8s">✦</i><i class="st" style="right:7%;bottom:5%;font-size:20px;animation-delay:-1.7s">✦</i>
+<i class="pt" style="left:18%;animation-duration:13s;animation-delay:-2s"></i><i class="pt" style="left:46%;animation-duration:16s;animation-delay:-7s"></i><i class="pt" style="left:72%;animation-duration:14s;animation-delay:-10s"></i>
 
-<!-- 빛 스윕 -->
-<div class="hz-sweep" style="position:absolute;left:0;top:0;right:0;bottom:0;z-index:4;pointer-events:none;opacity:.55;"></div>
+<div class="hzf">
 
-<!-- 반짝임 (금빛) -->
-<svg class="hz-tw" width="20" height="20" viewBox="-8 -8 16 16" style="position:absolute;left:9%;top:11%;z-index:5;pointer-events:none;filter:drop-shadow(0 0 5px #f2d98a);"><path d="M0,-8 C.5,-2 2,-.5 8,0 C2,.5 .5,2 0,8 C-.5,2 -2,.5 -8,0 C-2,-.5 -.5,-2 0,-8Z" fill="#fff3c4" stroke="#b8975a" stroke-width=".5"/></svg>
-<svg class="hz-tw" width="14" height="14" viewBox="-8 -8 16 16" style="position:absolute;right:10%;top:7%;z-index:5;pointer-events:none;animation-delay:-1.2s;filter:drop-shadow(0 0 4px #f2d98a);"><path d="M0,-8 C.5,-2 2,-.5 8,0 C2,.5 .5,2 0,8 C-.5,2 -2,.5 -8,0 C-2,-.5 -.5,-2 0,-8Z" fill="#fff3c4" stroke="#b8975a" stroke-width=".6"/></svg>
-<svg class="hz-tw" width="24" height="24" viewBox="-8 -8 16 16" style="position:absolute;right:5%;top:38%;z-index:5;pointer-events:none;animation-delay:-2.1s;filter:drop-shadow(0 0 6px #f2d98a);"><path d="M0,-8 C.5,-2 2,-.5 8,0 C2,.5 .5,2 0,8 C-.5,2 -2,.5 -8,0 C-2,-.5 -.5,-2 0,-8Z" fill="#fff3c4" stroke="#b8975a" stroke-width=".4"/></svg>
-<svg class="hz-tw" width="16" height="16" viewBox="-8 -8 16 16" style="position:absolute;left:4%;top:52%;z-index:5;pointer-events:none;animation-delay:-.6s;filter:drop-shadow(0 0 5px #f2d98a);"><path d="M0,-8 C.5,-2 2,-.5 8,0 C2,.5 .5,2 0,8 C-.5,2 -2,.5 -8,0 C-2,-.5 -.5,-2 0,-8Z" fill="#fff3c4" stroke="#b8975a" stroke-width=".6"/></svg>
-<svg class="hz-tw" width="18" height="18" viewBox="-8 -8 16 16" style="position:absolute;left:46%;top:70%;z-index:5;pointer-events:none;animation-delay:-2.8s;filter:drop-shadow(0 0 5px #f2d98a);"><path d="M0,-8 C.5,-2 2,-.5 8,0 C2,.5 .5,2 0,8 C-.5,2 -2,.5 -8,0 C-2,-.5 -.5,-2 0,-8Z" fill="#fff3c4" stroke="#b8975a" stroke-width=".5"/></svg>
-<svg class="hz-tw" width="22" height="22" viewBox="-8 -8 16 16" style="position:absolute;right:8%;bottom:6%;z-index:5;pointer-events:none;animation-delay:-1.7s;filter:drop-shadow(0 0 6px #f2d98a);"><path d="M0,-8 C.5,-2 2,-.5 8,0 C2,.5 .5,2 0,8 C-.5,2 -2,.5 -8,0 C-2,-.5 -.5,-2 0,-8Z" fill="#fff3c4" stroke="#b8975a" stroke-width=".5"/></svg>
+<p class="hzh" style="font-size:9px;letter-spacing:8px;">H A R Z E N</p>
+<h1 class="foil" style="text-align:center;margin:8px 0 2px;font-size:21px;font-weight:800;letter-spacing:2px;line-height:1.4;">재가 된 봄의 제국,<br>하르젠</h1>
+<p class="hzh" style="font-size:9px;letter-spacing:3px;margin-bottom:12px;">THE EMPIRE OF ASHEN SPRING</p>
+<p class="hzh" style="color:#b8975a;font-size:11px;letter-spacing:6px;margin-bottom:14px;">— ❖ —</p>
 
-<!-- 떨어지는 꽃잎 -->
-<i class="hz-fall" style="position:absolute;left:18%;top:-4%;z-index:5;width:7px;height:11px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#fffdf6,#e3d5b6);box-shadow:1px 1px 2px rgba(110,90,55,.35);pointer-events:none;animation-duration:13s;animation-delay:-2s;"></i>
-<i class="hz-fall" style="position:absolute;left:44%;top:-4%;z-index:5;width:6px;height:9px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#fffdf6,#e6d9bd);box-shadow:1px 1px 2px rgba(110,90,55,.35);pointer-events:none;animation-duration:16s;animation-delay:-7s;"></i>
-<i class="hz-fall" style="position:absolute;left:68%;top:-4%;z-index:5;width:8px;height:12px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#fffdf6,#e0d0ae);box-shadow:1px 1px 2px rgba(110,90,55,.35);pointer-events:none;animation-duration:14s;animation-delay:-10s;"></i>
-<i class="hz-fall" style="position:absolute;left:84%;top:-4%;z-index:5;width:6px;height:9px;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#fffdf6,#e6d9bd);box-shadow:1px 1px 2px rgba(110,90,55,.35);pointer-events:none;animation-duration:18s;animation-delay:-4s;"></i>
-
-<!-- 아치 액자 -->
-<div style="position:relative;z-index:2;margin:0 4% 0 12%;">
-<svg viewBox="0 0 300 90" preserveAspectRatio="none" width="100%" height="90" style="display:block;overflow:visible;" xmlns="http://www.w3.org/2000/svg">
-<g fill="none" stroke-linejoin="round">
-<path transform="translate(1.2 1.4)" stroke="#fffdf7" stroke-width="1.6" vector-effect="non-scaling-stroke" d="M1,90 V52 C1,40 10,38 22,36 C40,33 46,28 52,20 C60,8 80,2 150,2 C220,2 240,8 248,20 C254,28 260,33 278,36 C290,38 299,40 299,52 V90"/>
-<path stroke="#c9bb9d" stroke-width="1.4" vector-effect="non-scaling-stroke" d="M1,90 V52 C1,40 10,38 22,36 C40,33 46,28 52,20 C60,8 80,2 150,2 C220,2 240,8 248,20 C254,28 260,33 278,36 C290,38 299,40 299,52 V90"/>
-<path transform="translate(1.2 1.4)" stroke="#fffdf7" stroke-width="1.4" vector-effect="non-scaling-stroke" d="M5,90 V53 C5,44 13,42 25,40 C43,37 50,32 56,25 C64,13 84,7 150,7 C216,7 236,13 244,25 C250,32 257,37 275,40 C287,42 295,44 295,53 V90"/>
-<path stroke="#c9bb9d" stroke-width="1.2" vector-effect="non-scaling-stroke" d="M5,90 V53 C5,44 13,42 25,40 C43,37 50,32 56,25 C64,13 84,7 150,7 C216,7 236,13 244,25 C250,32 257,37 275,40 C287,42 295,44 295,53 V90"/>
-</g></svg>
-
-<div style="margin-top:-76px;padding:0 20px 20px;border-style:double;border-width:0 5px 5px 5px;border-color:#c9bb9d;background:linear-gradient(180deg,rgba(255,253,246,.35),rgba(255,253,246,0));">
-
-<!-- 머리말 -->
-<p style="text-align:center;margin:0;padding-top:34px;font-size:9px;letter-spacing:8px;color:#a08f6d;text-shadow:1px 1px 0 #fff;">H A R Z E N</p>
-<h1 class="hz-foil" style="text-align:center;margin:8px 0 2px;font-size:20px;font-weight:800;letter-spacing:2px;line-height:1.4;filter:drop-shadow(1px 1px 0 rgba(255,255,255,.9));">재가 된 봄의 제국,<br>하르젠</h1>
-<p style="text-align:center;margin:0 0 14px;font-size:9px;letter-spacing:3px;color:#a08f6d;text-shadow:1px 1px 0 #fff;">THE EMPIRE OF ASHEN SPRING</p>
-<p style="text-align:center;margin:0 0 14px;color:#b8975a;font-size:11px;letter-spacing:6px;text-shadow:1px 1px 0 #fff;">— ❖ —</p>
-
-<!-- 세계관 -->
 <details style="margin:0 0 20px;">
-<summary class="hz-sum" style="cursor:pointer;text-align:center;padding:11px 10px;background:linear-gradient(180deg,#f8f5ec,#ece5d4);border:1px solid #d3c7ad;box-shadow:inset 1px 1px 0 #fff,inset -1px -1px 3px rgba(120,100,60,.22),0 3px 8px rgba(100,85,55,.18);font-size:13px;letter-spacing:3px;text-shadow:1px 1px 0 #fff;">
-맹세의 서문 <span style="color:#b8975a;">✦</span>
-</summary>
-<div style="margin-top:8px;padding:14px 14px 12px;background:rgba(255,253,246,.7);border:1px solid #e0d6c0;box-shadow:inset 0 0 18px rgba(160,140,95,.14);font-size:13px;line-height:2;">
-<p style="margin:0 0 10px;">하르젠에서 맹세는 말이 아니라 <b>계절</b>입니다. 지켜진 약속 위에는 꽃이 피고, 저버린 약속이 지나간 자리에는 재가 내립니다. 그래서 이 제국의 봄은 언제나 누군가의 정직함으로 오고, 겨울은 누군가의 침묵 속에서 길어집니다.</p>
-<p style="margin:0 0 10px;">혼례의 밤, 부부는 서로의 살갗에 <b>서약의 꽃</b>을 새깁니다. {{char}}의 꽃은 오 년 내내 지지 않았습니다. 사람들은 그것을 대공의 덕이라 불렀으나, 실은 {{user}}가 제 남은 날들을 한 장씩 뜯어 그의 겨울 위에 덮어 주고 있었던 까닭입니다.</p>
-<blockquote style="margin:0;padding:8px 12px;border-left:2px solid #b8975a;background:linear-gradient(90deg,rgba(184,151,90,.14),transparent);color:#6d6250;font-size:12.5px;font-style:italic;">“서로의 삶에 간섭하지 않는다.”<br><span style="font-size:11px;color:#9a8c70;">— 혼례 서약의 단 한 줄. 훗날 가장 다정한 거짓말의 방패가 되었다.</span></blockquote>
+<summary class="hzs">맹세의 서문 <span style="color:#b8975a;">✦</span></summary>
+<div class="hzb">
+<p>하르젠에서 맹세는 말이 아니라 <b>계절</b>입니다. 지켜진 약속 위에는 꽃이 피고, 저버린 약속이 지나간 자리에는 재가 내립니다. 그래서 이 제국의 봄은 언제나 누군가의 정직함으로 오고, 겨울은 누군가의 침묵 속에서 길어집니다.</p>
+<p>혼례의 밤, 부부는 서로의 살갗에 <b>서약의 꽃</b>을 새깁니다. {{char}}의 꽃은 오 년 내내 지지 않았습니다. 사람들은 그것을 대공의 덕이라 불렀으나, 실은 {{user}}가 제 남은 날들을 한 장씩 뜯어 그의 겨울 위에 덮어 주고 있었던 까닭입니다.</p>
+<blockquote class="hzq">“서로의 삶에 간섭하지 않는다.”<br><span style="font-size:11px;color:#9a8c70;">— 혼례 서약의 단 한 줄. 훗날 가장 다정한 거짓말의 방패가 되었다.</span></blockquote>
 </div>
 </details>
 
-<p style="text-align:center;margin:0 0 14px;font-size:11px;letter-spacing:4px;color:#a08f6d;text-shadow:1px 1px 0 #fff;">서재 깊숙이 잠긴 편지함</p>
+<p class="hzh" style="font-size:11px;letter-spacing:4px;margin-bottom:14px;">서재 깊숙이 잠긴 편지함</p>
 
-<!-- 편지 1 -->
-<details style="margin:0 0 12px 8%;">
-<summary class="hz-sum" style="cursor:pointer;background:linear-gradient(115deg,#f3ead2,#fffaea 34%,#e9d8ad 66%,#f8f0da);border:1px solid #c2ae80;padding:12px 15px;transform:rotate(-2.5deg);box-shadow:0 8px 16px rgba(80,66,35,.28),inset 0 0 0 4px rgba(255,255,255,.45);font-size:13px;">
-첫 번째 편지 <span style="float:right;color:#b8975a;">✦</span>
-</summary>
-<div style="background:linear-gradient(115deg,#fbf5e4,#fffdf5 40%,#f1e6c8);border:1px solid #d3c29a;padding:15px;margin-top:8px;font-size:13px;line-height:2;box-shadow:0 8px 18px rgba(80,66,35,.22),inset 0 0 24px rgba(180,150,80,.18);">
-<p style="margin:0;">오늘은 약차를 조금 더 진하게 달였습니다. 당신이 새벽 서리를 이고 돌아오실 길이 유난히 길어 보여서요. 찻잔의 온기가 식기 전에 닿기를 바라며, 창가에 불 하나를 더 남겨 둡니다.</p>
-<p style="margin:8px 0 0;">보내지 못할 편지임을 압니다. 그래도 적습니다. 말하지 못한 마음은 적어 두지 않으면 어디에도 남지 않으니까요.</p>
-<p style="margin:10px 0 0;text-align:right;color:#8b7747;font-style:italic;">— {{user}}</p>
+<details style="margin:0 0 12px 5%;">
+<summary class="hzls" style="transform:rotate(-2deg);">첫 번째 편지 <span style="float:right;color:#b8975a;">✦</span></summary>
+<div class="hzlc">
+<p>오늘은 약차를 조금 더 진하게 달였습니다. 당신이 새벽 서리를 이고 돌아오실 길이 유난히 길어 보여서요. 찻잔의 온기가 식기 전에 닿기를 바라며, 창가에 불 하나를 더 남겨 둡니다.</p>
+<p>보내지 못할 편지임을 압니다. 그래도 적습니다. 말하지 못한 마음은 적어 두지 않으면 어디에도 남지 않으니까요.</p>
+<p class="hzsig">— {{user}}</p>
 </div>
 </details>
 
-<!-- 편지 2 -->
-<details style="margin:0 8% 12px 0;">
-<summary class="hz-sum" style="cursor:pointer;background:linear-gradient(115deg,#f6eed9,#fffbee 30%,#eadab3 66%,#f9f1dc);border:1px solid #c2ae80;padding:12px 15px;transform:rotate(2deg);box-shadow:0 8px 16px rgba(80,66,35,.28),inset 0 0 0 4px rgba(255,255,255,.45);font-size:13px;">
-두 번째 편지 <span style="float:right;color:#b8975a;">✦</span>
-</summary>
-<div style="background:linear-gradient(115deg,#fbf5e4,#fffdf5 40%,#f1e6c8);border:1px solid #d3c29a;padding:15px;margin-top:8px;font-size:13px;line-height:2;box-shadow:0 8px 18px rgba(80,66,35,.22),inset 0 0 24px rgba(180,150,80,.18);">
-<p style="margin:0;">오늘은 봄이 어떤 냄새였는지 떠오르지 않았습니다. 분명 알고 있던 것인데, 손에 쥐려 하면 연기처럼 흩어집니다.</p>
-<p style="margin:8px 0 0;">그래도 괜찮습니다. 당신의 군복 깃에서 나던 서리 냄새는 아직 또렷하니까요. 잊는다는 건 비워지는 일이 아니라, 하나를 골라 오래 품는 일인가 봅니다.</p>
-<p style="margin:10px 0 0;text-align:right;color:#8b7747;font-style:italic;">— {{user}}</p>
+<details style="margin:0 5% 12px 0;">
+<summary class="hzls" style="transform:rotate(1.8deg);">두 번째 편지 <span style="float:right;color:#b8975a;">✦</span></summary>
+<div class="hzlc">
+<p>오늘은 봄이 어떤 냄새였는지 떠오르지 않았습니다. 분명 알고 있던 것인데, 손에 쥐려 하면 연기처럼 흩어집니다.</p>
+<p>그래도 괜찮습니다. 당신의 군복 깃에서 나던 서리 냄새는 아직 또렷하니까요. 잊는다는 건 비워지는 일이 아니라, 하나를 골라 오래 품는 일인가 봅니다.</p>
+<p class="hzsig">— {{user}}</p>
 </div>
 </details>
 
-<!-- 마지막 편지 -->
-<details style="margin:0 0 22px 4%;">
-<summary class="hz-sum" style="cursor:pointer;background:linear-gradient(115deg,#ebddb8,#fbf1d3 30%,#dac38c 66%,#efe2bd);border:1px solid #a68f58;padding:12px 15px;transform:rotate(-1.2deg);box-shadow:0 10px 20px rgba(80,66,35,.34),0 0 20px rgba(255,255,255,.9),inset 0 0 0 4px rgba(255,255,255,.4);font-size:13px;">
-<span class="hz-pulse" style="display:inline-block;width:19px;height:19px;line-height:19px;text-align:center;border-radius:50%;background:radial-gradient(circle at 35% 30%,#4c4a52,#0f0f12);color:#ecd9a0;font-size:10px;vertical-align:middle;">❀</span>
-마지막 편지 · 봉인 <span style="float:right;color:#b8975a;">✦</span>
-</summary>
-<div style="background:linear-gradient(115deg,#fbf5e4,#fffdf5 40%,#f1e6c8);border:1px solid #c4b080;padding:16px;margin-top:8px;font-size:13px;line-height:2;box-shadow:0 10px 22px rgba(80,66,35,.3),inset 0 0 26px rgba(180,150,80,.2);">
-<p style="margin:0;">이 편지를 읽으실 때쯤이면 저는 당신의 이름이 무엇이었는지 잊었을지도 모릅니다. 이름이 떠난 자리에도 마음은 남아, 문 앞에서 한참을 서성이겠지요.</p>
-<p style="margin:8px 0 0;">그러니 한 줄만 남기겠습니다.</p>
+<details style="margin:0 0 22px 3%;">
+<summary class="hzls" style="transform:rotate(-1deg);background:linear-gradient(115deg,#ebddb8,#fbf1d3 30%,#dac38c 66%,#efe2bd);border-color:#a68f58;"><span class="seal">❀</span> 마지막 편지 · 봉인 <span style="float:right;color:#b8975a;">✦</span></summary>
+<div class="hzlc">
+<p>이 편지를 읽으실 때쯤이면 저는 당신의 이름이 무엇이었는지 잊었을지도 모릅니다. 이름이 떠난 자리에도 마음은 남아, 문 앞에서 한참을 서성이겠지요.</p>
+<p>그러니 한 줄만 남기겠습니다.</p>
 <p style="margin:12px 0;text-align:center;font-weight:800;letter-spacing:1px;padding:9px 0;border-top:1px solid #b8975a;border-bottom:1px solid #b8975a;">오늘도 당신이 무사해서 다행입니다.</p>
-<p style="margin:0;text-align:right;color:#8b7747;font-style:italic;">— {{user}}</p>
-<blockquote style="margin:14px 0 0;padding:8px 12px;border-left:2px solid #3a342b;background:linear-gradient(90deg,rgba(0,0,0,.06),transparent);color:#5a5246;font-size:12.5px;font-style:italic;">…늦었군. 나는 또 늦었어.<br><span style="font-size:11px;">— {{char}}</span></blockquote>
+<p class="hzsig">— {{user}}</p>
+<blockquote class="hzq" style="margin-top:14px;border-left-color:#3a342b;">…늦었군. 나는 또 늦었어.<br><span style="font-size:11px;">— {{char}}</span></blockquote>
 </div>
 </details>
 
-<p style="text-align:center;margin:0 0 14px;color:#b8975a;font-size:11px;letter-spacing:6px;text-shadow:1px 1px 0 #fff;">— ❖ —</p>
+<p class="hzh" style="color:#b8975a;font-size:11px;letter-spacing:6px;margin-bottom:14px;">— ❖ —</p>
 
-<!-- 캐릭터 -->
-<details style="margin:0;">
-<summary class="hz-sum" style="cursor:pointer;text-align:center;padding:11px 10px;background:linear-gradient(180deg,#f8f5ec,#ece5d4);border:1px solid #d3c7ad;box-shadow:inset 1px 1px 0 #fff,inset -1px -1px 3px rgba(120,100,60,.22),0 3px 8px rgba(100,85,55,.18);font-size:14px;font-weight:800;letter-spacing:4px;text-shadow:1px 1px 0 #fff;">
-{{char}} <span style="color:#b8975a;font-weight:normal;">✦</span>
-</summary>
+<details>
+<summary class="hzs" style="font-size:14px;font-weight:800;letter-spacing:4px;">{{char}} <span style="color:#b8975a;font-weight:normal;">✦</span></summary>
 <div style="margin-top:10px;">
-
-<!-- 신문 스크랩 -->
-<div class="hz-news" style="position:relative;padding:9px 10px 10px;border:1px solid #cfc6ad;transform:rotate(-1.2deg);box-shadow:0 8px 18px rgba(70,58,35,.34),inset 0 0 22px rgba(150,125,70,.25);color:#26221b;">
+<div class="news">
 <div style="text-align:center;border-bottom:3px double #26221b;padding-bottom:4px;">
-<div style="font-size:8.5px;letter-spacing:2px;display:flex;justify-content:space-between;"><span>제 5 호</span><span>북부판</span><span>재(灰)의 해</span></div>
-<div style="font-size:19px;font-weight:800;letter-spacing:6px;line-height:1.3;">하 르 젠 일 보</div>
+<p style="font-size:8.5px;letter-spacing:2px;">제 5 호 · 북부판 · 재(灰)의 해</p>
+<p style="font-size:20px;font-weight:800;letter-spacing:6px;line-height:1.3;">하 르 젠 일 보</p>
 </div>
-<div style="font-size:15px;font-weight:800;line-height:1.35;margin:7px 0 6px;text-align:center;letter-spacing:-.3px;">서리의 대공, 새벽 귀환<br><span style="font-size:10.5px;font-weight:normal;letter-spacing:0;">— 서재의 불빛은 꺼지지 않았다</span></div>
+<p style="font-size:15px;font-weight:800;line-height:1.4;margin:8px 0 7px;text-align:center;">서리의 대공, 새벽 귀환<br><span style="font-size:10.5px;font-weight:normal;">— 서재의 불빛은 꺼지지 않았다</span></p>
 <div style="position:relative;border:1px solid #26221b;background:#cfc8b3;line-height:0;overflow:hidden;">
-<img src="{{char_image}}" alt="" style="display:block;width:100%;filter:grayscale(1) contrast(1.4) brightness(1.04) sepia(.22) blur(.35px);">
+<img src="{{scene:1}}" style="display:block;width:100%;filter:grayscale(1) contrast(1.4) brightness(1.04) sepia(.22) blur(.35px);">
 <div style="position:absolute;left:0;top:0;right:0;bottom:0;background-image:radial-gradient(circle at center,rgba(24,20,12,.62) 0,rgba(24,20,12,.62) .85px,transparent 1.35px);background-size:3.2px 3.2px;mix-blend-mode:multiply;"></div>
-<div style="position:absolute;left:0;top:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 40%,transparent 55%,rgba(60,48,25,.38) 100%);"></div>
-<div class="hz-glint" style="position:absolute;left:0;top:0;right:0;bottom:0;background:linear-gradient(105deg,transparent 40%,rgba(255,250,225,.55) 50%,transparent 60%);"></div>
+<div style="position:absolute;left:0;top:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 40%,transparent 55%,rgba(60,48,25,.4) 100%);"></div>
 </div>
-<p style="margin:4px 0 7px;font-size:10px;line-height:1.6;font-style:italic;border-bottom:1px solid #26221b;padding-bottom:5px;">▲ 북부 대공 {{char}}. 군복 깃에 내린 서리를 털지 않은 채 서재로 향했다고 전해진다. <span style="float:right;">〈본지 사진부〉</span></p>
-<table style="width:100%;border-collapse:collapse;font-size:11.5px;line-height:1.6;">
-<tr><td style="padding:3px 4px;width:22%;font-weight:800;vertical-align:top;border-bottom:1px dotted #8a8269;">연 령</td><td style="padding:3px 4px;border-bottom:1px dotted #8a8269;">스물아홉, 북부를 다스리는 대공</td></tr>
-<tr><td style="padding:3px 4px;font-weight:800;vertical-align:top;border-bottom:1px dotted #8a8269;">용 모</td><td style="padding:3px 4px;border-bottom:1px dotted #8a8269;">흑청색 머리칼, 서리가 얹힌 듯한 회청색 눈</td></tr>
-<tr><td style="padding:3px 4px;font-weight:800;vertical-align:top;border-bottom:1px dotted #8a8269;">기 질</td><td style="padding:3px 4px;border-bottom:1px dotted #8a8269;">차갑도록 실무적이나, 모든 것이 지나간 뒤에야 무너지는 사람</td></tr>
-<tr><td style="padding:3px 4px;font-weight:800;vertical-align:top;">버 릇</td><td style="padding:3px 4px;">잠들기 전, 편지를 한 통씩 읽는다</td></tr>
-</table>
+<p style="margin:5px 0 7px;font-size:10px;line-height:1.6;font-style:italic;border-bottom:1px solid #26221b;padding-bottom:5px;">▲ 북부 대공 {{char}}. 군복 깃에 내린 서리를 털지 않은 채 서재로 향했다고 전해진다. 〈본지 사진부〉</p>
+<p class="nl"><b>연 령</b>스물아홉, 북부를 다스리는 대공</p>
+<p class="nl"><b>용 모</b>흑청색 머리칼, 서리가 얹힌 듯한 회청색 눈</p>
+<p class="nl"><b>기 질</b>차갑도록 실무적이나, 모든 것이 지나간 뒤에야 무너지는 사람</p>
+<p class="nl" style="border:0"><b>버 릇</b>잠들기 전, 편지를 한 통씩 읽는다</p>
 </div>
-
-<blockquote style="margin:14px 0 0;padding:9px 12px;border-left:2px solid #b8975a;background:linear-gradient(90deg,rgba(184,151,90,.14),transparent);color:#6d6250;font-size:12.5px;line-height:1.9;font-style:italic;">“용서해 달라는 말은 하지 않겠다. 다만, 곁에 있게는 해 줘.”</blockquote>
+<blockquote class="hzq" style="margin-top:14px;">“용서해 달라는 말은 하지 않겠다. 다만, 곁에 있게는 해 줘.”</blockquote>
 </div>
 </details>
 
 </div>
-</div>
 
-<p style="text-align:center;margin:20px 0 0;font-size:10px;letter-spacing:4px;color:#a08f6d;text-shadow:1px 1px 0 #fff;position:relative;z-index:2;">맹세는 꽃이 되고, 배신은 재가 된다</p>
+<p class="hzh" style="margin:18px 0 0;font-size:10px;letter-spacing:4px;position:relative;z-index:2;">맹세는 꽃이 되고, 배신은 재가 된다</p>
 </div>
