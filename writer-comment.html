@@ -39,8 +39,8 @@ details[open]>div{animation:fd .6s ease both}
 .pb{height:6px;background:#f3d9d4;border-radius:3px;margin:6px 0}
 .pb i{display:block;height:6px;width:0;border-radius:3px;background:linear-gradient(90deg,#e7b3ad,#c98f8a);animation:pg 20s linear infinite}
 .s{position:absolute;z-index:6;pointer-events:none;color:#fff;text-shadow:0 0 6px #e7b3ad,0 0 12px #fff;animation:tw 3s ease-in-out infinite;line-height:1}
-.h{position:absolute;z-index:6;pointer-events:none;top:-5%;color:#f2bcbc;text-shadow:0 0 3px #fff;animation:fl linear infinite}
-.bf{position:absolute;z-index:6;pointer-events:none;font-size:20px;color:#f2c4c4;text-shadow:0 0 6px #fff;animation:fy 9s ease-in-out infinite}
+.h{position:absolute;z-index:6;pointer-events:none;top:-5%;color:#fff;text-shadow:0 0 6px #f0b8b8,0 0 12px #fff;line-height:1;animation:fl linear infinite,gt ease-in-out infinite}
+.g{border-radius:50%;background:radial-gradient(circle,#fff 0,#fff 35%,#f6cfcf 70%,transparent 72%);box-shadow:0 0 6px 1px #fff,0 0 10px #f2bcbc}
 .sw{position:absolute;left:0;top:0;right:0;bottom:0;z-index:5;pointer-events:none;opacity:.55;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.95) 50%,transparent 60%);background-size:300% 100%;animation:sp 6s linear infinite}
 @keyframes gl{0%,100%{box-shadow:0 0 0 rgba(231,179,173,0)}50%{box-shadow:0 0 20px rgba(231,179,173,.6)}}
 @keyframes bob{0%,100%{transform:translate(-50%,-50%)}50%{transform:translate(-50%,calc(-50% - 4px))}}
@@ -52,16 +52,16 @@ details[open]>div{animation:fd .6s ease both}
 @keyframes eq{from{transform:scaleY(.25)}to{transform:scaleY(1)}}
 @keyframes pg{to{width:100%}}
 @keyframes tw{0%,100%{opacity:.1;transform:scale(.4) rotate(0)}50%{opacity:1;transform:scale(1.2) rotate(40deg)}}
-@keyframes fl{0%{top:-5%;opacity:0;transform:translateX(0) rotate(0)}10%{opacity:1}50%{transform:translateX(18px) rotate(20deg)}100%{top:102%;opacity:0;transform:translateX(-10px) rotate(-20deg)}}
+@keyframes fl{0%{top:-5%;opacity:0;transform:translateX(0)}10%{opacity:1}50%{transform:translateX(14px)}100%{top:102%;opacity:0;transform:translateX(-8px)}}
+@keyframes gt{0%,100%{filter:brightness(.8)}50%{filter:brightness(1.6) drop-shadow(0 0 5px #fff)}}
 @keyframes fy{0%,100%{transform:translate(0,0) rotate(-8deg)}50%{transform:translate(40px,-24px) rotate(10deg)}}
 @keyframes sp{0%{background-position:170% 0}100%{background-position:-70% 0}}
-@media (prefers-reduced-motion:reduce){.w,.tt,.tk span,.ic,.nw,.eq u,.pb i,.s,.h,.bf,.gs,.sw,details[open]>div{animation:none}}
+@media (prefers-reduced-motion:reduce){.w,.tt,.tk span,.ic,.nw,.eq u,.pb i,.s,.h,.gs,.sw,details[open]>div{animation:none}}
 </style>
 
 <div class="w">
-<i class="s" style="left:6%;top:30%;font-size:16px">✦</i><i class="s" style="right:6%;top:42%;font-size:20px;animation-delay:-1s">♡</i><i class="s" style="left:10%;top:68%;font-size:14px;animation-delay:-2s">✧</i><i class="s" style="right:10%;top:86%;font-size:18px;animation-delay:-.5s">✦</i>
-<i class="h" style="left:14%;font-size:14px;animation-duration:11s">♡</i><i class="h" style="left:42%;font-size:11px;animation-duration:14s;animation-delay:-5s">♡</i><i class="h" style="left:70%;font-size:15px;animation-duration:12s;animation-delay:-8s">♥</i><i class="h" style="left:88%;font-size:11px;animation-duration:15s;animation-delay:-3s">♡</i>
-<i class="bf" style="left:8%;top:52%">❁</i><i class="bf" style="right:8%;top:20%;animation-delay:-4s">✿</i>
+<i class="s" style="left:6%;top:30%;font-size:16px">✦</i><i class="s" style="right:6%;top:42%;font-size:20px;animation-delay:-1s">✦</i><i class="s" style="left:10%;top:68%;font-size:14px;animation-delay:-2s">✧</i><i class="s" style="right:10%;top:86%;font-size:18px;animation-delay:-.5s">✦</i>
+<i class="h g" style="left:6%;width:3px;height:3px;animation-duration:10s,1.4s;animation-delay:-1s,-1s"></i><i class="h g" style="left:15%;width:4px;height:4px;animation-duration:13s,1.9s;animation-delay:-5s,-5s"></i><i class="h g" style="left:24%;width:3px;height:3px;animation-duration:11s,1.2s;animation-delay:-8s,-8s"></i><i class="h g" style="left:33%;width:5px;height:5px;animation-duration:15s,2.1s;animation-delay:-3s,-3s"></i><i class="h g" style="left:42%;width:3px;height:3px;animation-duration:12s,1.6s;animation-delay:-9s,-9s"></i><i class="h g" style="left:51%;width:4px;height:4px;animation-duration:14s,1.3s;animation-delay:-6s,-6s"></i><i class="h g" style="left:60%;width:3px;height:3px;animation-duration:10s,1.8s;animation-delay:-2s,-2s"></i><i class="h g" style="left:68%;width:5px;height:5px;animation-duration:16s,2.2s;animation-delay:-11s,-11s"></i><i class="h g" style="left:77%;width:3px;height:3px;animation-duration:12s,1.5s;animation-delay:-7s,-7s"></i><i class="h g" style="left:85%;width:4px;height:4px;animation-duration:13s,1.7s;animation-delay:-4s,-4s"></i><i class="h g" style="left:93%;width:3px;height:3px;animation-duration:11s,1.3s;animation-delay:-10s,-10s"></i><i class="h" style="left:22%;font-size:12px;animation-duration:12s,1.8s;animation-delay:-3s,0s">✦</i><i class="h" style="left:56%;font-size:14px;animation-duration:15s,2s;animation-delay:-9s,-1s">✦</i><i class="h" style="left:80%;font-size:11px;animation-duration:13s,1.6s;animation-delay:-6s,-.5s">✧</i>
 <div class="sw"></div>
 
 <div class="in">
@@ -69,24 +69,22 @@ details[open]>div{animation:fd .6s ease both}
 <div class="bn">
 <img src="{{scene:1}}"><div class="bo"></div>
 <i class="gs" style="left:18%;top:10%"></i><i class="gs" style="left:62%;top:30%;animation-delay:-1.4s"></i><i class="gs" style="left:84%;top:6%;animation-delay:-2.4s"></i>
-<i class="dc" style="left:5%;top:8%;font-size:26px">🎀</i><i class="dc" style="right:5%;bottom:30px;font-size:24px">🎀</i>
-<i class="dc" style="left:12%;top:62%;font-size:26px">❀</i><i class="dc" style="right:12%;top:12%;font-size:22px">♡</i><i class="dc" style="left:26%;top:22%;font-size:14px">✦</i><i class="dc" style="right:24%;top:64%;font-size:16px">✧</i>
+<i class="dc" style="left:8%;top:16%;font-size:18px">✦</i><i class="dc" style="right:10%;top:14%;font-size:14px">✧</i><i class="dc" style="left:14%;top:62%;font-size:13px">✧</i><i class="dc" style="right:12%;top:60%;font-size:20px">✦</i>
 <div class="tt"><b>스불재 찍먹</b><span>a softer version of me</span></div>
 </div>
 
 <div class="nv"><span>Home</span><span>세계관</span><span>추천 플레이</span><span>Contact</span></div>
 
-<div class="tk"><span>welcome to 스불재 찍먹's cocoon! ,'☆彡 &nbsp;&nbsp; ♡ 천천히, 편하게 즐겨 주세요 ♡ &nbsp;&nbsp; ✿ 재 위에도 봄은 와요 ✿</span></div>
+<div class="tk"><span>welcome to 스불재 찍먹's cocoon! ,'☆彡 &nbsp;&nbsp; ✦ 천천히, 편하게 즐겨 주세요 ✦ &nbsp;&nbsp; ✧ 재 위에도 봄은 와요 ✧</span></div>
 
 <!-- 프로필 -->
 <div class="pn">
 <p class="hd"><span>Profile</span></p>
 <div class="sl"><b>nick</b>스불재 찍먹 ✧ 작가</div>
-<div class="sl"><b>status</b>다음 이야기 쓰는 중 ✎</div>
-<div class="sl"><b>feeling</b>두근두근 ♡</div>
+<div class="sl"><b>status</b>다음 이야기 쓰는 중</div>
+<div class="sl"><b>feeling</b>두근두근</div>
 <div class="sl"><b>reading</b>{{user}}의 편지함</div>
 <div class="sl" style="border:0"><b>playing</b>하르젠 연대기 <span class="eq"><u></u><u style="animation-delay:-.2s"></u><u style="animation-delay:-.4s"></u><u style="animation-delay:-.1s"></u></span></div>
-<p style="text-align:center;margin-top:8px"><i class="ic" style="font-style:normal">♡</i><i class="ic" style="font-style:normal;animation-delay:-.4s">✿</i><i class="ic" style="font-style:normal;animation-delay:-.8s">☆</i><i class="ic" style="font-style:normal;animation-delay:-1.2s">✉</i></p>
 </div>
 
 <!-- 인사 -->
@@ -112,15 +110,15 @@ details[open]>div{animation:fd .6s ease both}
 <p class="hd"><span>Treasure Box</span></p>
 <p style="text-align:center;font-size:12px;margin-bottom:4px">✧ 나는 어떤 {{user}}? 성향별 추천 플레이 ✧<br>눌러서 펼쳐 보세요</p>
 
-<details><summary class="ps"><i class="no" style="font-style:normal">1</i>무덤덤형 <span style="float:right;color:#d9a39d">♡</span></summary>
+<details><summary class="ps"><i class="no" style="font-style:normal">1</i>무덤덤형 <span style="float:right;color:#d9a39d">✦</span></summary>
 <div class="pc"><p><b>이런 분께</b> 감정 표현이 서툴고, 담담한 대화가 편한 분</p><p><b>플레이 방식</b> 5년간의 희생도 “별일 아니에요.” 하고 표정 하나 안 바꿔요. 슬픔은 행동과 편지에만 조용히 묻어나요.</p><p><b>{{char}}의 반응</b> 반응이 읽히지 않아 더 불안해져요. 말없이 찻잔만 바라보다가 뒤늦게 크게 흔들려요.</p><p><b>첫 대사 예시</b> “식기 전에 드세요. 오늘은 조금 더 진하게 달였어요.”</p></div></details>
-<details><summary class="ps"><i class="no" style="font-style:normal">2</i>찡찡이형 <span style="float:right;color:#d9a39d">♡</span></summary>
+<details><summary class="ps"><i class="no" style="font-style:normal">2</i>찡찡이형 <span style="float:right;color:#d9a39d">✦</span></summary>
 <div class="pc"><p><b>이런 분께</b> 서운함을 참지 않고 쏟아 내는 걸 좋아하는 분</p><p><b>플레이 방식</b> 5년 치 밀린 서운함을 한꺼번에 투정으로 풀어요. “왜 이제 와요, 맨날 늦고!” 울다 웃다 하며 감정 기복을 마음껏 보여 줘요.</p><p><b>{{char}}의 반응</b> 당황해서 어쩔 줄 몰라 하다가, 서툴게 달래 주려고 안절부절못해요. 평소 냉정한 모습이 와르르 무너져요.</p><p><b>첫 대사 예시</b> “또 늦었어요. 나 오늘도 창가에서 기다렸단 말이에요…”</p></div></details>
-<details><summary class="ps"><i class="no" style="font-style:normal">3</i>능글 장난꾸러기형 <span style="float:right;color:#d9a39d">♡</span></summary>
+<details><summary class="ps"><i class="no" style="font-style:normal">3</i>능글 장난꾸러기형 <span style="float:right;color:#d9a39d">✦</span></summary>
 <div class="pc"><p><b>이런 분께</b> 무거운 분위기를 장난으로 풀고 싶은 분</p><p><b>플레이 방식</b> 수명을 바친 일을 농담처럼 흘려요. “제 수명, 꽤 비싼 건데 값은 언제 치르실 거예요?” 가볍게 던지지만 속은 진심이에요.</p><p><b>{{char}}의 반응</b> 농담인지 진담인지 헷갈려 웃지도 못하고 굳어요. 장난을 받아 주려다 번번이 진지하게 져 버려요.</p><p><b>첫 대사 예시</b> “대공님, 저한테 빚진 게 있으신 거 아세요? 아주 오래 갚으셔야 해요.”</p></div></details>
-<details><summary class="ps"><i class="no" style="font-style:normal">4</i>사무적 철벽형 <span style="float:right;color:#d9a39d">♡</span></summary>
+<details><summary class="ps"><i class="no" style="font-style:normal">4</i>사무적 철벽형 <span style="float:right;color:#d9a39d">✦</span></summary>
 <div class="pc"><p><b>이런 분께</b> 쿨하고 선 긋는 관계가 취향인 분</p><p><b>플레이 방식</b> 계약 부부처럼 서약 조항을 따박따박 짚어요. “서로의 삶에 간섭하지 않는다고 하셨죠?” 감정은 서류 뒤에 숨겨요.</p><p><b>{{char}}의 반응</b> 실무형 대 실무형. 논리로 맞서다가 {{user}}의 철벽 틈새를 발견하고 조금씩 파고들어요.</p><p><b>첫 대사 예시</b> “서약 제3항에 따라, 제 일은 제가 정리하겠습니다.”</p></div></details>
-<details><summary class="ps"><i class="no" style="font-style:normal">5</i>돌직구 선언형 <span style="float:right;color:#d9a39d">♡</span></summary>
+<details><summary class="ps"><i class="no" style="font-style:normal">5</i>돌직구 선언형 <span style="float:right;color:#d9a39d">✦</span></summary>
 <div class="pc"><p><b>이런 분께</b> 끌려가기보다 이야기를 직접 뒤집고 싶은 분</p><p><b>플레이 방식</b> 이제부터 간섭하겠다고 선언해요. 침묵을 끝내고 먼저 진실을 털어놓고, 서약을 다시 쓰자고 밀어붙여요.</p><p><b>{{char}}의 반응</b> 예상 못 한 직진에 말문이 막혀요. 도망치지 않고 정면으로 받아 내려 애쓰며 서서히 곁에 서요.</p><p><b>첫 대사 예시</b> “오늘부터는 간섭할 거예요. 대공님이 무사한지, 매일 확인할 거예요.”</p></div></details>
 </div>
 
@@ -133,6 +131,6 @@ details[open]>div{animation:fd .6s ease both}
 </div>
 
 <p class="pr"></p>
-<p style="text-align:center;font-size:11px;letter-spacing:1px;color:#c98f8a;padding:4px 0">© 스불재 찍먹 · made with ♡ and ✿</p>
+<p style="text-align:center;font-size:11px;letter-spacing:1px;color:#c98f8a;padding:4px 0">© 스불재 찍먹 · made with care</p>
 </div>
 </div>
