@@ -1,0 +1,137 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+.w{max-width:420px;margin:0 auto;position:relative;overflow:hidden;padding:9px;border:6px dotted #f0b3c2;border-radius:6px;font-family:'Gowun Dodum',sans-serif;font-size:13px;line-height:1.85;color:#8a6a70;background:repeating-linear-gradient(90deg,rgba(240,190,200,.3) 0 2px,transparent 2px 14px),#fbf3e6;animation:gl 4s ease-in-out infinite}
+.w p{margin:0}
+.in{position:relative;border:2px solid #f4cdd6;background:#fffafa;padding-bottom:8px;box-shadow:0 0 0 3px #fff}
+.bn{position:relative;height:160px;overflow:hidden;background:linear-gradient(135deg,#f9d9e0,#f6e8e2);border-bottom:3px double #f0b3c2}
+.bn img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;opacity:.5;filter:sepia(.55) saturate(.6) hue-rotate(-25deg) brightness(1.12)}
+.bg{position:absolute;left:50%;top:50%;margin:-50px 0 0 -50px;width:100px;height:100px;border-radius:50%;background:#fff;border:3px dotted #d99aa9;box-shadow:0 0 0 5px rgba(255,255,255,.85),0 0 0 7px #f0b3c2;text-align:center;animation:bob 3s ease-in-out infinite}
+.bg b{display:block;font-size:36px;line-height:1;margin-top:16px}
+.bg span{font-size:10px;letter-spacing:1px;color:#b97d8a}
+.pin{position:absolute;left:-4px;top:-6px;font-size:30px;z-index:6;font-style:normal;transform:rotate(-30deg);animation:wob 4s ease-in-out infinite}
+.nv{background:#f2e4d8;padding:9px 4px;text-align:center;border-bottom:3px double #f0b3c2}
+.nv span{display:inline-block;margin:3px;padding:2px 11px;background:#fff;border:1px dotted #d99aa9;font-size:11px;letter-spacing:1px;box-shadow:0 0 0 2px #fff,0 0 0 3px #f4cdd6}
+.tk{overflow:hidden;white-space:nowrap;padding:9px 0 2px;color:#a8707b}
+.tk span{display:inline-block;padding-left:100%;animation:mq 15s linear infinite}
+.pn{margin:12px 9px;padding:13px;background:linear-gradient(rgba(240,180,195,.2) 1px,transparent 1px) 0 0/10px 10px,linear-gradient(90deg,rgba(240,180,195,.2) 1px,transparent 1px) 0 0/10px 10px,#fff;border:2px dotted #e7a3b3;box-shadow:0 0 0 3px #fff,0 0 0 4px #f4cdd6,0 4px 10px rgba(200,130,150,.18)}
+.hd{text-align:center;margin:0 0 10px}
+.hd span{display:inline-block;padding:0 9px;letter-spacing:3px;color:#a8707b;background:linear-gradient(transparent 55%,#f8c9d4 55%);font-size:13px}
+.av{display:block;margin:0 auto 10px;width:62%;border:2px dotted #e7a3b3;padding:4px;background:#fff;box-shadow:0 0 0 3px #fff,0 0 0 4px #f4cdd6;filter:sepia(.18) saturate(.9) brightness(1.05)}
+.sl{padding:2px 4px;border-bottom:1px dotted #f0b3c2}
+.sl b{display:inline-block;width:62px;color:#c98a98;font-weight:normal}
+.ic{display:inline-block;width:30px;height:30px;line-height:28px;margin:0 3px;text-align:center;border-radius:50%;border:1px solid #e7a3b3;background:#fff;color:#d17b92;animation:hb 1.6s ease-in-out infinite}
+.nw{display:inline-block;padding:0 6px;margin-right:4px;background:#f48fa8;color:#fff;font-size:10px;border-radius:8px;animation:bl 1s steps(2) infinite}
+.wl{margin:7px 0;padding:7px 10px;background:#fff6f8;border:1px dotted #e7a3b3}
+.wl b{color:#c98a98}
+details>summary{list-style:none;cursor:pointer}
+details>summary::-webkit-details-marker{display:none}
+details[open]>div{animation:fd .6s ease both}
+.ps{margin:7px 0 0;padding:8px 10px;background:linear-gradient(90deg,#fff0f3,#fff);border:1px dotted #e7a3b3;box-shadow:0 0 0 2px #fff,0 0 0 3px #f8d7df}
+.no{display:inline-block;width:22px;height:22px;line-height:22px;margin-right:6px;text-align:center;border-radius:50%;background:#f48fa8;color:#fff;font-size:12px;box-shadow:0 0 0 2px #fff,0 0 0 3px #f48fa8}
+.pc{margin:0 4px;padding:9px 10px;border:1px dotted #f0b3c2;border-top:0;background:rgba(255,255,255,.8);font-size:12.5px}
+.pc p{margin:0 0 5px}
+.pc b{color:#c98a98;font-weight:normal}
+.eq u{display:inline-block;width:3px;height:14px;margin:0 1px;background:#e08a9f;vertical-align:bottom;transform-origin:bottom;animation:eq .7s ease-in-out infinite alternate}
+.pb{height:6px;background:#f4cdd6;border-radius:3px;margin:6px 0}
+.pb i{display:block;height:6px;width:0;border-radius:3px;background:#e08a9f;animation:pg 20s linear infinite}
+.s{position:absolute;z-index:6;pointer-events:none;color:#f48fa8;text-shadow:0 0 6px #fff;animation:tw 3s ease-in-out infinite;line-height:1}
+.h{position:absolute;z-index:6;pointer-events:none;top:-5%;color:#f4a3b8;text-shadow:0 0 3px #fff;animation:fl linear infinite}
+.bf{position:absolute;z-index:6;pointer-events:none;font-size:20px;animation:fy 9s ease-in-out infinite}
+.sw{position:absolute;left:0;top:0;right:0;bottom:0;z-index:5;pointer-events:none;opacity:.5;background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.9) 50%,transparent 58%);background-size:300% 100%;animation:sp 7s linear infinite}
+@keyframes gl{0%,100%{box-shadow:0 0 0 rgba(244,143,168,0)}50%{box-shadow:0 0 18px rgba(244,143,168,.55)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes wob{0%,100%{transform:rotate(-30deg)}50%{transform:rotate(-18deg)}}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@keyframes hb{0%,100%{transform:scale(1)}20%{transform:scale(1.18)}40%{transform:scale(1)}}
+@keyframes bl{50%{opacity:.25}}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes eq{from{transform:scaleY(.25)}to{transform:scaleY(1)}}
+@keyframes pg{to{width:100%}}
+@keyframes tw{0%,100%{opacity:.1;transform:scale(.4) rotate(0)}50%{opacity:1;transform:scale(1.2) rotate(40deg)}}
+@keyframes fl{0%{top:-5%;opacity:0;transform:translateX(0) rotate(0)}10%{opacity:1}50%{transform:translateX(18px) rotate(20deg)}100%{top:102%;opacity:0;transform:translateX(-10px) rotate(-20deg)}}
+@keyframes fy{0%,100%{transform:translate(0,0) rotate(-8deg)}50%{transform:translate(40px,-24px) rotate(10deg)}}
+@keyframes sp{0%{background-position:170% 0}100%{background-position:-70% 0}}
+@media (prefers-reduced-motion:reduce){.w,.bg,.pin,.tk span,.ic,.nw,.eq u,.pb i,.s,.h,.bf,.sw,details[open]>div{animation:none}}
+</style>
+
+<div class="w">
+<i class="s" style="left:6%;top:30%;font-size:16px">✦</i><i class="s" style="right:6%;top:42%;font-size:20px;animation-delay:-1s">♡</i><i class="s" style="left:10%;top:68%;font-size:14px;animation-delay:-2s">✧</i><i class="s" style="right:10%;top:86%;font-size:18px;animation-delay:-.5s">✦</i>
+<i class="h" style="left:14%;font-size:14px;animation-duration:11s">♡</i><i class="h" style="left:42%;font-size:11px;animation-duration:14s;animation-delay:-5s">♡</i><i class="h" style="left:70%;font-size:15px;animation-duration:12s;animation-delay:-8s">♥</i><i class="h" style="left:88%;font-size:11px;animation-duration:15s;animation-delay:-3s">♡</i>
+<i class="bf" style="left:8%;top:52%">🦋</i><i class="bf" style="right:8%;top:20%;animation-delay:-4s">🦋</i>
+<div class="sw"></div>
+
+<div class="in">
+<i class="pin">🧷</i>
+
+<div class="bn">
+<img src="{{scene:1}}">
+<div class="bg"><b>🦋</b><span>cocoon</span></div>
+</div>
+
+<div class="nv"><span>Home</span><span>세계관</span><span>추천 플레이</span><span>Contact</span></div>
+
+<div class="tk"><span>welcome to 스불재 찍먹's cocoon! ,'☆彡 &nbsp;&nbsp; ♡ 천천히, 편하게 즐겨 주세요 ♡ &nbsp;&nbsp; ✿ 재 위에도 봄은 와요 ✿</span></div>
+
+<!-- 프로필 -->
+<div class="pn">
+<p class="hd"><span>Profile</span></p>
+<img class="av" src="{{char_image}}">
+<div class="sl"><b>nick</b>스불재 찍먹 ✧ 작가</div>
+<div class="sl"><b>status</b>다음 이야기 쓰는 중 ✎</div>
+<div class="sl"><b>feeling</b>두근두근 ♡</div>
+<div class="sl"><b>reading</b>{{user}}의 편지함</div>
+<div class="sl" style="border:0"><b>playing</b>하르젠 연대기 <span class="eq"><u></u><u style="animation-delay:-.2s"></u><u style="animation-delay:-.4s"></u><u style="animation-delay:-.1s"></u></span></div>
+<p style="text-align:center;margin-top:8px"><i class="ic" style="font-style:normal">♡</i><i class="ic" style="font-style:normal;animation-delay:-.4s">✿</i><i class="ic" style="font-style:normal;animation-delay:-.8s">☆</i><i class="ic" style="font-style:normal;animation-delay:-1.2s">✉</i></p>
+</div>
+
+<!-- 인사 -->
+<div class="pn">
+<p class="hd"><span>Welcome!</span></p>
+<p>안녕하세요, <b>스불재 찍먹</b>이에요 ♡<br>작은 고치 같은 이 공간까지 찾아와 주셔서 고마워요.</p>
+<p style="margin-top:6px">이 이야기는 <b style="color:#c98a98">맹세 · 재 · 편지</b> 세 가지로 만들었어요. 조금 아프고, 많이 다정한 이야기예요. 마음에 안 드는 장면은 언제든 돌려도 괜찮으니, 편한 속도로 즐겨 주세요.</p>
+<p style="margin-top:6px;text-align:center;color:#c98a98">오늘도 좋은 플레이 되세요 ✿</p>
+</div>
+
+<!-- 세계관 -->
+<div class="pn">
+<p class="hd"><span>World</span> <span class="nw">NEW</span></p>
+<p style="text-align:center;margin-bottom:6px;color:#a8707b">“약속을 지키면 꽃이 피고, 어기면 재가 되는 제국”</p>
+<div class="wl"><b>① 마법은 ‘맹세’에서 나와요.</b><br>한 번 한 약속을 지키는 만큼 힘이 생기는 세계예요.</div>
+<div class="wl"><b>② 결혼하면 ‘서약의 꽃’이 새겨져요.</b><br>약속을 지키는 동안은 꽃이 피어 있고, 깨지면 재가 돼요.</div>
+<div class="wl"><b>③ {{char}}의 꽃은 5년째 활짝 피어 있어요.</b><br>사실은 {{user}}가 자기 수명을 조금씩 나눠 주고 있었기 때문이에요. {{char}}은 몰라요.</div>
+<div class="wl"><b>④ 혼례 서약은 딱 한 줄이에요.</b><br>“서로의 삶에 간섭하지 않는다.” 그래서 {{user}}는 말하지 못하고, 대신 편지를 써요.</div>
+<div class="wl"><b>⑤ 지금은 ‘뒤늦은 진실’의 시간이에요.</b><br>냉정한 실무형 대공 {{char}}이, 모든 게 늦어진 뒤에야 무너지기 시작해요.</div>
+</div>
+
+<!-- 추천 플레이 -->
+<div class="pn">
+<p class="hd"><span>Treasure Box</span></p>
+<p style="text-align:center;font-size:12px;margin-bottom:4px">✧ 이런 플레이는 어때요? 눌러서 펼쳐 보세요 ✧</p>
+
+<details><summary class="ps"><i class="no" style="font-style:normal">1</i>늦은 귀가 <span style="float:right;color:#f48fa8">♡</span></summary>
+<div class="pc"><p><b>분위기</b> 애틋 · 조용함</p><p><b>이렇게 시작해요</b> 새벽, 군복 깃에 서리를 단 채 {{char}}이 돌아와요. 식은 약차 한 잔이 서재에 놓여 있어요. 누가 두고 갔을까요?</p></div></details>
+
+<details><summary class="ps"><i class="no" style="font-style:normal">2</i>보내지 못한 편지 <span style="float:right;color:#f48fa8">♡</span></summary>
+<div class="pc"><p><b>분위기</b> 두근 · 들킬 듯 말 듯</p><p><b>이렇게 시작해요</b> {{char}}이 잠들기 전에 읽던 편지를 {{user}}가 우연히 보게 돼요. 자기가 쓴 편지가 왜 그의 손에 있을까요?</p></div></details>
+
+<details><summary class="ps"><i class="no" style="font-style:normal">3</i>재가 내리는 날 <span style="float:right;color:#f48fa8">♡</span></summary>
+<div class="pc"><p><b>분위기</b> 긴장 · 폭로</p><p><b>이렇게 시작해요</b> 서약의 꽃이 처음으로 시들어요. 꽃이 왜 오래 피어 있었는지, {{char}}이 진실을 묻기 시작해요.</p></div></details>
+
+<details><summary class="ps"><i class="no" style="font-style:normal">4</i>이름을 잊은 아침 <span style="float:right;color:#f48fa8">♡</span></summary>
+<div class="pc"><p><b>분위기</b> 아련 · 눈물 주의</p><p><b>이렇게 시작해요</b> 수명의 대가로 {{user}}가 {{char}}의 이름을 잠깐 잊어요. 이번에는 {{char}}이 먼저 다가가요. “…늦었군. 나는 또 늦었어.”</p></div></details>
+
+<details><summary class="ps"><i class="no" style="font-style:normal">5</i>서약의 한 줄을 지우다 <span style="float:right;color:#f48fa8">♡</span></summary>
+<div class="pc"><p><b>분위기</b> 해피엔딩 지향 · 벅참</p><p><b>이렇게 시작해요</b> {{char}}이 “간섭하지 않는다”는 서약을 스스로 깨겠다고 선언해요. 재가 되는 대신 다시 꽃이 필 수 있을까요?</p></div></details>
+</div>
+
+<!-- 플레이어 -->
+<div class="pn" style="text-align:center">
+<p class="hd"><span>Now Playing</span></p>
+<p>♪ 재 위에 피는 봄 <span class="eq"><u></u><u style="animation-delay:-.3s"></u><u style="animation-delay:-.5s"></u></span></p>
+<div class="pb"><i></i></div>
+<p style="font-size:12px;color:#c98a98">◁◁ &nbsp; ▶ &nbsp; ▷▷</p>
+</div>
+
+<p style="text-align:center;font-size:11px;letter-spacing:1px;color:#c98a98;padding:4px 0">© 스불재 찍먹 · made with ♡ and ✿</p>
+</div>
+</div>
