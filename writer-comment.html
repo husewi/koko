@@ -1,38 +1,40 @@
 <style>
-.w{max-width:420px;margin:auto;position:relative;overflow:hidden;padding:8px;border:5px solid #e3bbb5;font:13px/1.8 'Gowun Dodum',sans-serif;color:#8a625f;background:linear-gradient(120deg,#f6dcd6,#fcede7 25%,#efc8c4 45%,#fdf0e9 62%,#f0cac5 80%,#fbe8e1)}
+.w{max-width:420px;margin:auto;position:relative;overflow:hidden;padding:8px;border:5px solid transparent;border-image:linear-gradient(135deg,#f7dcd5,#c99690 28%,#fdeee6 50%,#c99690 72%,#f7dcd5) 1;font:13px/1.8 'Gowun Dodum',sans-serif;color:#7a524f;background:radial-gradient(ellipse at 15% 6%,rgba(255,255,255,.85),transparent 38%),linear-gradient(120deg,#f6dcd6,#fcede7 24%,#efc8c4 44%,#fdf0e9 62%,#f0cac5 80%,#fbe8e1)}
 .w p{margin:0}
-.b{position:relative;height:130px;padding-top:36px;text-align:center;background:linear-gradient(125deg,#f2c9c7,#fcebe4 30%,#e9b9b7 52%,#fdeee7 72%,#efc4c1)}
-.b img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;opacity:.6}
-.t{position:relative;display:inline-block;padding:8px 26px;border:1px solid #fff;border-radius:14px;background:rgba(255,248,244,.6);font-size:21px;letter-spacing:4px;color:#a8706c}
-.t small{display:block;font-size:10px;letter-spacing:3px;color:#c98f8a}
-.r{height:14px;background:radial-gradient(circle at 7px 7px,#fff 3px,#d9b8b1 6px,transparent 6.5px) 0 0/14px 14px repeat-x}
-.p{margin:10px 0;padding:12px;border-radius:12px;border:1px solid #e6c1bb;background:linear-gradient(135deg,#fff,#fce8e2 50%,#fff);box-shadow:0 0 0 3px rgba(255,255,255,.6),0 6px 14px rgba(190,120,115,.18)}
-.h{text-align:center;letter-spacing:3px;color:#a8706c;margin-bottom:8px!important}
+.b{position:relative;overflow:hidden;height:180px;padding-top:104px;text-align:center;background:#f2c9c7;border-bottom:2px solid #e3b7b1}
+.b img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+.b:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(140,80,85,.55))}
+.b:after{content:"";position:absolute;inset:7px;border:1px solid rgba(255,255,255,.9);box-shadow:0 0 0 3px rgba(255,255,255,.3)}
+.t{position:relative;z-index:1;font-size:27px;letter-spacing:9px;color:#fff;text-shadow:0 1px 4px rgba(140,70,75,.8),0 0 14px rgba(255,255,255,.6)}
+.t small{display:block;font-size:10px;letter-spacing:4px;font-style:italic;text-shadow:0 1px 3px rgba(140,70,75,.8)}
+.r{height:14px;margin:4px 0;background:radial-gradient(circle at 7px 7px,#fff 3px,#d9b8b1 6px,transparent 6.5px) 0 0/14px 14px repeat-x}
+.p{margin:12px 0;padding:13px;border-radius:12px;border:1px solid #e0b7b0;background:linear-gradient(135deg,#fff,#fce6e0 55%,#fff);box-shadow:0 0 0 3px rgba(255,255,255,.65),0 8px 16px rgba(190,120,115,.22)}
+.h{width:fit-content;margin:0 auto 9px!important;padding:0 10px;letter-spacing:4px;color:#a8706c;background:linear-gradient(transparent 58%,#f6d3cd 58%)}
 .h:before{content:"✦ "}.h:after{content:" ✦"}
-summary{list-style:none;cursor:pointer;margin-top:6px;padding:6px 10px;border-radius:10px;border:1px solid #ecccc6;background:linear-gradient(90deg,#fdeeea,#fff)}
+.l{margin:6px 0!important;padding:6px 10px;border-radius:9px;border:1px solid #f0d6d1;background:linear-gradient(90deg,#fff,#fbe9e4)}
+.q{counter-reset:n}
+summary{list-style:none;cursor:pointer;margin-top:7px;padding:6px 10px;border-radius:10px;border:1px solid #ecccc6;background:linear-gradient(90deg,#fdeeea,#fff);box-shadow:0 2px 5px rgba(190,120,115,.12)}
 summary::-webkit-details-marker{display:none}
-.c{padding:8px 10px;font-size:12.5px}
-.m{overflow:hidden;white-space:nowrap;text-align:center;font-size:12px;color:#a8706c;padding:6px 0}
-.m span{display:inline-block;padding-left:100%;animation:m 14s linear infinite}
+summary:before{counter-increment:n;content:counter(n);display:inline-block;width:22px;height:22px;line-height:22px;margin-right:8px;text-align:center;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#f7e6e2 45%,#d8b2ab);color:#a8706c;font-size:12px;box-shadow:0 1px 3px rgba(150,90,85,.35)}
+summary:after{content:"✦";float:right;color:#d9a39d}
+.c{margin:0 4px;padding:8px 10px;border:1px solid #f0d6d1;border-top:0;border-radius:0 0 9px 9px;background:rgba(255,255,255,.75);font-size:12.5px}
 .g{position:absolute;top:-5%;width:4px;height:4px;border-radius:50%;background:#fff;box-shadow:0 0 6px 2px #fff,0 0 10px #f2bcbc;animation:f 12s linear infinite}
-.x{position:absolute;color:#fff;text-shadow:0 0 8px #e7b3ad;animation:k 3s ease-in-out infinite}
-.v{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.4) 50%,transparent 60%) 0 0/300% 100%;animation:v 7s linear infinite}
-@keyframes m{to{transform:translateX(-100%)}}
+.x{position:absolute;z-index:2;color:#fff;text-shadow:0 0 8px #e7b3ad;animation:k 3s ease-in-out infinite}
+.v{position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.45) 50%,transparent 60%) 0 0/300% 100%;animation:v 5s linear infinite}
 @keyframes f{0%{top:-5%;opacity:0}10%{opacity:1}100%{top:102%;opacity:0}}
 @keyframes k{50%{opacity:.1;transform:scale(.4)}}
 @keyframes v{to{background-position:-200% 0}}
 </style>
-<div class=w><i class=g style="left:8%;animation-delay:-1s"></i><i class=g style="left:20%;animation-delay:-6s"></i><i class=g style="left:32%;animation-delay:-3s"></i><i class=g style="left:45%;animation-delay:-9s"></i><i class=g style="left:57%;animation-delay:-5s"></i><i class=g style="left:69%;animation-delay:-11s"></i><i class=g style="left:81%;animation-delay:-2s"></i><i class=g style="left:92%;animation-delay:-7s"></i><i class=x style="left:7%;top:6%">✦</i><i class=x style="right:8%;top:12%;animation-delay:-1s">✧</i><i class=x style="right:12%;top:55%;animation-delay:-2s">✦</i><div class=v></div>
-<div class=b><img src="{{scene:1}}"><div class=t>스불재 찍먹<small>a softer version of me</small></div></div>
+<div class=w><i class=g style="left:8%;animation-delay:-1s"></i><i class=g style="left:32%;animation-delay:-3s"></i><i class=g style="left:57%;animation-delay:-5s"></i><i class=g style="left:81%;animation-delay:-2s"></i>
+<div class=b><img src="{{scene:1}}"><div class=v></div><i class=x style="left:8%;top:14%;font-size:20px">✦</i><i class=x style="right:18%;top:70%;font-size:22px;animation-delay:-.5s">✦</i><div class=t>스불재 찍먹<small>a softer version of me</small></div></div>
 <div class=r></div>
-<div class=m><span>✦ welcome to 스불재 찍먹's cocoon ✦ 천천히, 편하게 즐겨 주세요 ✦</span></div>
-<div class=p><p class=h>Hello</p><p>안녕하세요, 스불재 찍먹입니다.<br>찾아와 주셔서 감사합니다. 아래 세계관과 추천 플레이를 참고해서 편하게 즐겨 주세요.</p></div>
+<div class=p><p class=h>Hello</p><p style="text-align:center">안녕하세요, 스불재 찍먹입니다.<br>찾아와 주셔서 감사합니다.<br>편하게 즐겨 주세요.</p></div>
 <div class=p><p class=h>World</p>
-<p style="text-align:center;margin-bottom:6px">“약속을 지키면 꽃이 피고, 어기면 재가 되는 제국”</p>
-<p>① 마법은 ‘맹세’에서 나와요.</p>
-<p>② 혼례 때 ‘서약의 꽃’이 새겨지고, 약속이 깨지면 재가 돼요.</p>
-<p>③ {{char}}의 꽃은 5년째 활짝 피어 있어요. {{user}}가 수명을 나눠 주고 있었기 때문이에요.</p>
-<p>④ 혼례 서약은 단 한 줄, “서로의 삶에 간섭하지 않는다.”</p>
-<p>⑤ 모든 게 늦어진 뒤에야 {{char}}이 무너지기 시작해요.</p></div>
-<div class=p><p class=h>Play</p><p style="text-align:center;font-size:12px">나는 어떤 {{user}}? 성향별 추천 플레이</p><details><summary>1. 무덤덤형</summary><p class=c>“별일 아니에요.” 5년의 희생도 담담히 넘겨요. {{char}}은 반응을 읽지 못해 불안해하다 뒤늦게 크게 흔들려요.</p></details><details><summary>2. 찡찡이형</summary><p class=c>5년 치 서운함을 투정과 눈물로 쏟아내요. “왜 이제 와요, 맨날 늦고!” {{char}}은 어쩔 줄 몰라 해요.</p></details><details><summary>3. 능글 장난꾸러기형</summary><p class=c>“제 수명, 꽤 비싼 건데 언제 갚으실 거예요?” 농담처럼 던지는 진심에 {{char}}이 굳어요.</p></details><details><summary>4. 사무적 철벽형</summary><p class=c>“서약 제3항에 따라 제 일은 제가 정리합니다.” 감정을 서류 뒤에 숨기면 {{char}}이 틈을 파고들어요.</p></details><details><summary>5. 돌직구 선언형</summary><p class=c>“오늘부터 간섭할 거예요.” 먼저 진실을 털어놓고 서약을 다시 쓰자고 밀어붙여요. {{char}}은 말문이 막혀요.</p></details></div>
+<p class=l style="text-align:center;margin:0 0 8px!important">“약속을 지키면 꽃이 피고, 어기면 재가 되는 제국”</p>
+<p class=l>① 마법은 ‘맹세’에서 나와요.</p>
+<p class=l>② 혼례 때 ‘서약의 꽃’이 새겨지고, 약속이 깨지면 재가 돼요.</p>
+<p class=l>③ {{char}}의 꽃은 5년째 활짝. {{user}}가 수명을 나눠 주고 있었기 때문이에요.</p>
+<p class=l>④ 혼례 서약은 단 한 줄, “서로의 삶에 간섭하지 않는다.”</p>
+<p class=l>⑤ 모든 게 늦어진 뒤에야 {{char}}이 무너지기 시작해요.</p></div>
+<div class="p q"><p class=h>Play</p><p style="text-align:center;font-size:12px">나는 어떤 {{user}}? 성향별 추천</p><details><summary>무덤덤형</summary><p class=c>“별일 아니에요.” 담담히 넘기면 {{char}}이 불안해하다 뒤늦게 흔들려요.</p></details><details><summary>찡찡이형</summary><p class=c>“왜 이제 와요, 맨날 늦고!” 쏟아내는 투정에 {{char}}이 어쩔 줄 몰라 해요.</p></details><details><summary>능글 장난꾸러기형</summary><p class=c>“제 수명, 꽤 비싼 건데 언제 갚으실 거예요?” 농담 같은 진심에 {{char}}이 굳어요.</p></details><details><summary>사무적 철벽형</summary><p class=c>“서약 제3항에 따라 제 일은 제가 정리합니다.” {{char}}이 그 틈을 파고들어요.</p></details><details><summary>돌직구 선언형</summary><p class=c>“오늘부터 간섭할 거예요.” 진실을 먼저 털어놓으면 {{char}}은 말문이 막혀요.</p></details></div>
 <div class=r></div></div>
