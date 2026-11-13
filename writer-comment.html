@@ -1,14 +1,9 @@
 <style>
 .w{max-width:420px;margin:auto;position:relative;overflow:hidden;padding:8px;border:5px solid transparent;border-image:linear-gradient(135deg,#f7dcd5,#c99690 28%,#fdeee6 50%,#c99690 72%,#f7dcd5) 1;font:13px/1.8 'Gowun Dodum',sans-serif;color:#7a524f;background:radial-gradient(ellipse at 15% 6%,rgba(255,255,255,.85),transparent 38%),linear-gradient(120deg,#f6dcd6,#fcede7 24%,#efc8c4 44%,#fdf0e9 62%,#f0cac5 80%,#fbe8e1)}
 .w p{margin:0}
-.b{position:relative;overflow:hidden;height:180px;padding-top:104px;text-align:center;background:#f2c9c7;border-bottom:2px solid #e3b7b1}
-.b img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
-.b:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(140,80,85,.55))}
-.b:after{content:"";position:absolute;inset:7px;border:1px solid rgba(255,255,255,.9);box-shadow:0 0 0 3px rgba(255,255,255,.3)}
-.t{position:relative;z-index:1;font-size:27px;letter-spacing:9px;color:#fff;text-shadow:0 1px 4px rgba(140,70,75,.8),0 0 14px rgba(255,255,255,.6)}
-.t small{display:block;font-size:10px;letter-spacing:4px;font-style:italic;text-shadow:0 1px 3px rgba(140,70,75,.8)}
+.w img{position:absolute;left:0;top:0;width:100%;height:560px;object-fit:cover;-webkit-mask-image:linear-gradient(#000 20%,transparent);mask-image:linear-gradient(#000 20%,transparent)}
 .r{height:14px;margin:4px 0;background:radial-gradient(circle at 7px 7px,#fff 3px,#d9b8b1 6px,transparent 6.5px) 0 0/14px 14px repeat-x}
-.p{margin:12px 0;padding:13px;border-radius:12px;border:1px solid #e0b7b0;background:linear-gradient(135deg,#fff,#fce6e0 55%,#fff);box-shadow:0 0 0 3px rgba(255,255,255,.65),0 8px 16px rgba(190,120,115,.22)}
+.p{position:relative;z-index:1;margin:12px 0;padding:13px;border-radius:12px;border:1px solid #e0b7b0;background:linear-gradient(135deg,rgba(255,255,255,.82),rgba(252,230,224,.8) 55%,rgba(255,255,255,.82));box-shadow:0 0 0 3px rgba(255,255,255,.65),0 8px 16px rgba(190,120,115,.22)}
 .h{width:fit-content;margin:0 auto 9px!important;padding:0 10px;letter-spacing:4px;color:#a8706c;background:linear-gradient(transparent 58%,#f6d3cd 58%)}
 .h:before{content:"✦ "}.h:after{content:" ✦"}
 .l{margin:6px 0!important;padding:6px 10px;border-radius:9px;border:1px solid #f0d6d1;background:linear-gradient(90deg,#fff,#fbe9e4)}
@@ -18,16 +13,11 @@ summary::-webkit-details-marker{display:none}
 summary:before{counter-increment:n;content:counter(n);display:inline-block;width:22px;height:22px;line-height:22px;margin-right:8px;text-align:center;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#f7e6e2 45%,#d8b2ab);color:#a8706c;font-size:12px;box-shadow:0 1px 3px rgba(150,90,85,.35)}
 summary:after{content:"✦";float:right;color:#d9a39d}
 .c{margin:0 4px;padding:8px 10px;border:1px solid #f0d6d1;border-top:0;border-radius:0 0 9px 9px;background:rgba(255,255,255,.75);font-size:12.5px}
-.g{position:absolute;top:-5%;width:4px;height:4px;border-radius:50%;background:#fff;box-shadow:0 0 6px 2px #fff,0 0 10px #f2bcbc;animation:f 12s linear infinite}
 .x{position:absolute;z-index:2;color:#fff;text-shadow:0 0 8px #e7b3ad;animation:k 3s ease-in-out infinite}
-.v{position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.45) 50%,transparent 60%) 0 0/300% 100%;animation:v 5s linear infinite}
-@keyframes f{0%{top:-5%;opacity:0}10%{opacity:1}100%{top:102%;opacity:0}}
 @keyframes k{50%{opacity:.1;transform:scale(.4)}}
-@keyframes v{to{background-position:-200% 0}}
 </style>
-<div class=w><i class=g style="left:8%;animation-delay:-1s"></i><i class=g style="left:32%;animation-delay:-3s"></i><i class=g style="left:57%;animation-delay:-5s"></i><i class=g style="left:81%;animation-delay:-2s"></i>
-<div class=b><img src="{{scene:1}}"><div class=v></div><i class=x style="left:8%;top:14%;font-size:20px">✦</i><i class=x style="right:18%;top:70%;font-size:22px;animation-delay:-.5s">✦</i><div class=t>스불재 찍먹<small>a softer version of me</small></div></div>
-<div class=r></div>
+<div class=w>
+<img src="{{scene:1}}"><i class=x style="left:8%;top:6%;font-size:20px">✦</i><i class=x style="right:9%;top:16%;font-size:22px;animation-delay:-.5s">✦</i><i class=x style="left:86%;top:36%;font-size:14px;animation-delay:-1.5s">✧</i>
 <div class=p><p class=h>Hello</p><p style="text-align:center">안녕하세요, 스불재 찍먹입니다.<br>찾아와 주셔서 감사합니다.<br>편하게 즐겨 주세요.</p></div>
 <div class=p><p class=h>World</p>
 <p class=l style="text-align:center;margin:0 0 8px!important">“약속을 지키면 꽃이 피고, 어기면 재가 되는 제국”</p>
