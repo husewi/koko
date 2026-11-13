@@ -1,7 +1,7 @@
 <style>
 .w{max-width:420px;margin:auto;position:relative;overflow:hidden;padding:8px;border:5px solid transparent;border-image:linear-gradient(135deg,#f7dcd5,#c99690 28%,#fdeee6 50%,#c99690 72%,#f7dcd5) 1;font:13px/1.8 'Gowun Dodum',sans-serif;color:#7a524f;background:radial-gradient(ellipse at 15% 6%,rgba(255,255,255,.85),transparent 38%),linear-gradient(120deg,#f6dcd6,#fcede7 24%,#efc8c4 44%,#fdf0e9 62%,#f0cac5 80%,#fbe8e1)}
 .w p{margin:0}
-.w img{position:absolute;left:0;top:0;width:100%;height:560px;object-fit:cover;-webkit-mask-image:linear-gradient(#000 20%,transparent);mask-image:linear-gradient(#000 20%,transparent)}
+.w>img{display:block;width:calc(100% + 16px);height:360px;margin:-8px -8px -352px;object-fit:cover;-webkit-mask-image:linear-gradient(#000 30%,transparent);mask-image:linear-gradient(#000 30%,transparent)}
 .p{counter-reset:n;position:relative;z-index:1;margin:12px 0;padding:13px;border-radius:12px;border:1px solid #e0b7b0;background:linear-gradient(135deg,rgba(255,255,255,.82),rgba(252,230,224,.8) 55%,rgba(255,255,255,.82));box-shadow:0 0 0 3px rgba(255,255,255,.65),0 8px 16px rgba(190,120,115,.22)}
 .h{width:fit-content;margin:0 auto 9px!important;padding:0 10px;letter-spacing:4px;color:#a8706c;background:linear-gradient(transparent 58%,#f6d3cd 58%)}
 .h:before{content:"✦ "}.h:after{content:" ✦"}
@@ -17,8 +17,8 @@ summary:after{content:"✦";float:right;color:#d9a39d}
 @keyframes d{0%{top:-5%;opacity:0;transform:translateX(0) rotate(0)}8%{opacity:1}50%{transform:translateX(24px) rotate(180deg)}100%{top:102%;opacity:0;transform:translateX(-10px) rotate(360deg)}}
 @keyframes z{50%{filter:brightness(1.5) drop-shadow(0 0 4px #fff)}}
 </style>
-<div class=w>
-<img src="{{scene:1}}"><i class=x style="left:8%;top:6%;font-size:20px">✦</i><i class=x style="right:9%;top:16%;font-size:22px;animation-delay:-.5s">✦</i><i class=x style="left:86%;top:36%;font-size:14px;animation-delay:-1.5s">✧</i><i class=f style="left:6%;width:9px;height:12px;animation-duration:12s,1.6s;animation-delay:-2s,-2s"></i><i class=f style="left:29%;width:10px;height:13px;animation-duration:13s,1.9s;animation-delay:-5s,-5s"></i><i class=f style="left:41%;width:8px;height:11px;animation-duration:16s,1.5s;animation-delay:-12s,-12s"></i><i class=f style="left:53%;width:9px;height:12px;animation-duration:12s,1.7s;animation-delay:-7s,-7s"></i><i class=f style="left:75%;width:10px;height:13px;animation-duration:15s,2s;animation-delay:-10s,-10s"></i><i class=f style="left:86%;width:8px;height:11px;animation-duration:13s,1.6s;animation-delay:-4s,-4s"></i><i class=f style="left:94%;width:7px;height:9px;animation-duration:17s,1.4s;animation-delay:-14s,-14s"></i>
+<div class=w><img src="{{scene:1}}">
+<i class=x style="left:8%;top:6%;font-size:20px">✦</i><i class=x style="right:9%;top:16%;font-size:22px;animation-delay:-.5s">✦</i><i class=x style="left:86%;top:36%;font-size:14px;animation-delay:-1.5s">✧</i><i class=f style="left:6%;width:9px;height:12px;animation-duration:12s,1.6s;animation-delay:-2s,-2s"></i><i class=f style="left:29%;width:10px;height:13px;animation-duration:13s,1.9s;animation-delay:-5s,-5s"></i><i class=f style="left:41%;width:8px;height:11px;animation-duration:16s,1.5s;animation-delay:-12s,-12s"></i><i class=f style="left:53%;width:9px;height:12px;animation-duration:12s,1.7s;animation-delay:-7s,-7s"></i><i class=f style="left:75%;width:10px;height:13px;animation-duration:15s,2s;animation-delay:-10s,-10s"></i><i class=f style="left:86%;width:8px;height:11px;animation-duration:13s,1.6s;animation-delay:-4s,-4s"></i><i class=f style="left:94%;width:7px;height:9px;animation-duration:17s,1.4s;animation-delay:-14s,-14s"></i>
 <div class=p><p class=h>Hello</p><p style="text-align:center">안녕하세요, 스불재 찍먹입니다.<br>찾아와 주셔서 감사합니다.<br>편하게 즐겨 주세요.</p></div>
 <div class=p><p class=h>World</p>
 <p style="text-align:center;margin-bottom:8px;color:#a8706c;font-style:italic">“약속을 지키면 꽃이 피고, 어기면 재가 되는 제국”</p>
